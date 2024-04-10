@@ -1,0 +1,94 @@
+{
+	"abilities": [
+		{
+			"abilityID": "Avatar_Navia_ExtraAttack",
+			"abilityName": "Avatar_Navia_ExtraAttack",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_Attack_3_Create_Gadget",
+			"abilityName": "Avatar_Navia_Attack_3_Create_Gadget",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Navia_NormalAttack_3_Claymore",
+			"abilityName": "Navia_NormalAttack_3_Claymore",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_WeaponHide_Driver",
+			"abilityName": "Avatar_Navia_WeaponHide_Driver",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_Crystal_Seed_Get_Controller",
+			"abilityName": "Avatar_Navia_Crystal_Seed_Get_Controller",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_ElementalArt",
+			"abilityName": "Avatar_Navia_ElementalArt",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_ElementalArt_Pneuma",
+			"abilityName": "Avatar_Navia_ElementalArt_Pneuma",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_ElementalArt_ShotGun_Bullet",
+			"abilityName": "Avatar_Navia_ElementalArt_ShotGun_Bullet",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_ElementalBurst",
+			"abilityName": "Avatar_Navia_ElementalBurst",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Navia_Burst_Bullet_Upon",
+			"abilityName": "Navia_Burst_Bullet_Upon",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_NormalAttackDamage",
+			"abilityName": "Avatar_Navia_NormalAttackDamage",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Navia_PermanentSkill_2_Driver",
+			"abilityName": "Navia_PermanentSkill_2_Driver",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_PermanentSkill_1",
+			"abilityName": "Avatar_Navia_PermanentSkill_1",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Navia_Talent_1_Driver",
+			"abilityName": "Navia_Talent_1_Driver",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Navia_Talent_2_Driver",
+			"abilityName": "Navia_Talent_2_Driver",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Navia_Talent_4_Driver",
+			"abilityName": "Navia_Talent_4_Driver",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_FallingAnthem",
+			"abilityName": "Avatar_Navia_FallingAnthem",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Navia_Show_WindZone",
+			"abilityName": "Avatar_Navia_Show_WindZone",
+			"abilityOverride": ""
+		}
+	]
+}

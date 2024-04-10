@@ -1,0 +1,114 @@
+{
+	"abilities": [
+		{
+			"abilityID": "Avatar_Chiori_ExtraAttack",
+			"abilityName": "Avatar_Chiori_ExtraAttack",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_ElementalArt_PutTurret",
+			"abilityName": "Avatar_Chiori_ElementalArt_PutTurret",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "SkillObj_Chiori_ElementalArt_RockGadget_Turret",
+			"abilityName": "SkillObj_Chiori_ElementalArt_RockGadget_Turret",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_ElementalArt_Blink_HoldCharge",
+			"abilityName": "Avatar_Chiori_ElementalArt_Blink_HoldCharge",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_ElementalArt_Blink_OnStart",
+			"abilityName": "Avatar_Chiori_ElementalArt_Blink_OnStart",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "ElementalArt_Blink_Trail",
+			"abilityName": "ElementalArt_Blink_Trail",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_ElementalArt_Blink",
+			"abilityName": "Avatar_Chiori_ElementalArt_Blink",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_ElementalArt_Blink_SelectPos",
+			"abilityName": "Avatar_Chiori_ElementalArt_Blink_SelectPos",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Chiori_ElementalArt_AfterRushMove_CameraRevise",
+			"abilityName": "Chiori_ElementalArt_AfterRushMove_CameraRevise",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_ElementalArt_JumpSwitch",
+			"abilityName": "Avatar_Chiori_ElementalArt_JumpSwitch",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Bullet_Chiori_ElementalArt_Rush_Detect",
+			"abilityName": "Bullet_Chiori_ElementalArt_Rush_Detect",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_ElementalBurst",
+			"abilityName": "Avatar_Chiori_ElementalBurst",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Bullet_Chiori_ElementalBurst_RockBomb",
+			"abilityName": "Bullet_Chiori_ElementalBurst_RockBomb",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_FallingAnthem",
+			"abilityName": "Avatar_Chiori_FallingAnthem",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_NormalAttack_DamageHandler",
+			"abilityName": "Avatar_Chiori_NormalAttack_DamageHandler",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_Turret_Onkill_Handler",
+			"abilityName": "Avatar_Chiori_Turret_Onkill_Handler",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_PermanentSkill_2_OnCreateRockGadget",
+			"abilityName": "Avatar_Chiori_PermanentSkill_2_OnCreateRockGadget",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_Constellation_2_AttackLanded_CreateDoll",
+			"abilityName": "Avatar_Chiori_Constellation_2_AttackLanded_CreateDoll",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_Constellation_4_ElementalBurst_AddDoll",
+			"abilityName": "Avatar_Chiori_Constellation_4_ElementalBurst_AddDoll",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_Constellation_6_Strengthen",
+			"abilityName": "Avatar_Chiori_Constellation_6_Strengthen",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "SkillObj_Chiori_Turret_Constellation",
+			"abilityName": "SkillObj_Chiori_Turret_Constellation",
+			"abilityOverride": ""
+		},
+		{
+			"abilityID": "Avatar_Chiori_PermanentSkill_3",
+			"abilityName": "Avatar_Chiori_PermanentSkill_3",
+			"abilityOverride": ""
+		}
+	]
+}
