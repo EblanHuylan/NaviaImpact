@@ -46,7 +46,8 @@ start sdkserver.exe
 
 Get GI 4.5.0 client from somewhere,
 put patch [version.dll](https://git.xeondev.com/reversedrooms/hk4e-patch/releases/download/0.1.0/version.dll)
-file in your game folder, it will redirect game traffic and patch cryptography
+file in your game folder, it will redirect game traffic and patch cryptography.
+Replace [mihoyonet.dll](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20231030132335_iOEfPMcbrXpiA8Ca/ScatteredFiles/GenshinImpact_Data/Plugins/mihoyonet.dll) in `GenshinImpact_Data\Plugins`
 
 ## Contributing
 
