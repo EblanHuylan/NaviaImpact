@@ -20,6 +20,7 @@ lazy_static! {
 
 pub struct ExcelCollection {
     pub avatar_configs: Vec<AvatarExcelConfig>,
+    pub open_state_configs: Vec<OpenStateConfig>,
 }
 
 pub struct GameConfigCollection {
@@ -33,11 +34,15 @@ impl ExcelCollection {
                 "assets/ExcelBinOutput/AvatarExcelConfigData.json",
             ))
             .unwrap(),
+            open_state_configs: from_str(&load_asset(
+                "assets/ExcelBinOutput/OpenStateConfigData.json",
+            ))
+            .unwrap(),
         }
     }
 
     pub fn table_count(&self) -> usize {
-        1
+        2
     }
 }
 

@@ -5,8 +5,7 @@ use rand::RngCore;
 
 use super::*;
 use crate::{
-    game::{constants, entity::Entity, prop_types::*},
-    util,
+    data::EXCEL_COLLECTION, game::{constants, entity::Entity, prop_types::*}, util
 };
 
 pub async fn on_get_player_token_req(
@@ -75,9 +74,9 @@ pub async fn on_player_login_req(session: &PlayerSession, _body: &PlayerLoginReq
         .send(
             OPEN_STATE_UPDATE_NOTIFY,
             OpenStateUpdateNotify {
-                open_state_map: constants::OPEN_STATES
-                    .into_iter()
-                    .map(|id| (id, 1))
+                open_state_map: EXCEL_COLLECTION.open_state_configs
+                    .iter()
+                    .map(|op| (op.id, 1))
                     .collect(),
             },
         )

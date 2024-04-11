@@ -37,6 +37,15 @@ pub struct AvatarExcelConfig {
     pub lodpattern_name: String,
 }
 
+#[derive(Deserialize, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
+pub struct OpenStateConfig {
+    pub id: u32,
+    pub default_state: bool,
+    pub allow_client_open: bool,
+}
+
 #[derive(Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct PropGrowCurve {
