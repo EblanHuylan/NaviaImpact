@@ -3868,7 +3868,7 @@ pub struct Aebahhdlblh {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Niijhlphknp {
+pub struct CityInfo {
     #[prost(uint32, tag = "11")]
     pub gopafbeakcb: u32,
     #[prost(uint32, tag = "9")]
@@ -21383,7 +21383,7 @@ pub struct Mdfhdifmlgj {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Flmmpoonphk {
     #[prost(uint32, repeated, tag = "8")]
-    pub nfjhodfgfpk: ::prost::alloc::vec::Vec<u32>,
+    pub area_id_list: ::prost::alloc::vec::Vec<u32>,
 }
 /// CmdId: 95
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -25990,7 +25990,7 @@ pub struct Amlefnnmlei {
     #[prost(int32, tag = "4")]
     pub retcode: i32,
     #[prost(uint32, tag = "15")]
-    pub ljbnggpbeni: u32,
+    pub belong_uid: u32,
 }
 /// CmdId: 24632
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -27765,7 +27765,7 @@ pub struct Ccajhlpaipj {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Elaemanoekm {
     #[prost(message, optional, tag = "9")]
-    pub cdgokfagpdn: ::core::option::Option<Niijhlphknp>,
+    pub cdgokfagpdn: ::core::option::Option<CityInfo>,
     #[prost(int32, tag = "5")]
     pub retcode: i32,
     #[prost(uint32, tag = "13")]
@@ -32630,7 +32630,7 @@ pub struct Kmnjefmdmmf {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Nchibhabdle {
     #[prost(uint32, repeated, tag = "10")]
-    pub nfjhodfgfpk: ::prost::alloc::vec::Vec<u32>,
+    pub area_id_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, repeated, tag = "1")]
     pub aonamoacmbi: ::prost::alloc::vec::Vec<u32>,
     #[prost(int32, tag = "14")]
@@ -33754,9 +33754,9 @@ pub struct Dfpfobhagmg {
 /// CmdId: 1668
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Lpfinpojlce {
+pub struct GetScenePointReq {
     #[prost(uint32, tag = "10")]
-    pub ljbnggpbeni: u32,
+    pub belong_uid: u32,
     #[prost(bool, tag = "6")]
     pub appfphlakbg: bool,
     #[prost(uint32, tag = "11")]
@@ -38166,11 +38166,11 @@ pub struct Nffnahoahkk {
 /// CmdId: 5114
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Baklebmfmmi {
+pub struct GetSceneAreaReq {
     #[prost(uint32, tag = "2")]
     pub scene_id: u32,
     #[prost(uint32, tag = "14")]
-    pub ljbnggpbeni: u32,
+    pub belong_uid: u32,
 }
 /// CmdId: 3779
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -42608,11 +42608,11 @@ pub struct Poggadgmmbf {
 /// CmdId: 22648
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Akdfbahhljp {
+pub struct GetSceneAreaRsp {
     #[prost(message, repeated, tag = "4")]
-    pub inllpcgcpfk: ::prost::alloc::vec::Vec<Niijhlphknp>,
+    pub city_info_list: ::prost::alloc::vec::Vec<CityInfo>,
     #[prost(uint32, repeated, tag = "7")]
-    pub nfjhodfgfpk: ::prost::alloc::vec::Vec<u32>,
+    pub area_id_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "5")]
     pub scene_id: u32,
     #[prost(int32, tag = "15")]

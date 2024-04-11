@@ -22,3 +22,4 @@ pub const CHANGE_AVATAR_RSP: u16 = 5958;
 pub const EVT_AVATAR_SIT_DOWN_RSP: u16 = 29232;
 pub const EVT_AVATAR_STAND_UP_NOTIFY: u16 = 8549;
 pub const MARK_MAP_RSP: u16 = 25569;
+pub const GET_SCENE_AREA_RSP: u16 = 22648;

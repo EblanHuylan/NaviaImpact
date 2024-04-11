@@ -137,4 +137,5 @@ trait_handler! {
     EvtAvatarSitDownReq 764;
     EvtAvatarStandUpNotify 8549;
     MarkMapReq 7802;
+    GetSceneAreaReq 5114;
 }
