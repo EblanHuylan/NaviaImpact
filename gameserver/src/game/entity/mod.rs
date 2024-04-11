@@ -8,6 +8,7 @@ pub use weapon::SceneWeapon;
 
 pub trait Entity {
     fn get_position(&self) -> Vector;
+    fn set_position(&mut self, pos: Vector);
     fn get_entity_id(&self) -> u32;
     fn get_entity_type(&self) -> ProtEntityType;
     fn info(&self) -> SceneEntityInfo;

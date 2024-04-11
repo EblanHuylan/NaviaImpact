@@ -44,6 +44,8 @@ impl Entity for SceneWeapon {
         Vector::default()
     }
 
+    fn set_position(&mut self, _pos: Vector) {}
+
     fn get_entity_id(&self) -> u32 {
         self.entity_id
     }

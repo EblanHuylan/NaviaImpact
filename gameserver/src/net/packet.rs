@@ -136,4 +136,5 @@ trait_handler! {
     ChangeAvatarReq 3330;
     EvtAvatarSitDownReq 764;
     EvtAvatarStandUpNotify 8549;
+    MarkMapReq 7802;
 }

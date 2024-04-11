@@ -5,7 +5,9 @@ use rand::RngCore;
 
 use super::*;
 use crate::{
-    data::EXCEL_COLLECTION, game::{constants, entity::Entity, prop_types::*}, util
+    data::EXCEL_COLLECTION,
+    game::{entity::Entity, prop_types::*},
+    util,
 };
 
 pub async fn on_get_player_token_req(
@@ -36,9 +38,6 @@ pub async fn on_get_player_token_req(
 
 pub async fn on_player_login_req(session: &PlayerSession, _body: &PlayerLoginReq) -> Result<()> {
     session.player_info_mut().unlock_all_avatars();
-
-    let login_time_ms = util::cur_timestamp_ms();
-    let login_time = login_time_ms / 1000;
 
     let props = [
         (PROP_PLAYER_LEVEL, 5),
@@ -74,7 +73,8 @@ pub async fn on_player_login_req(session: &PlayerSession, _body: &PlayerLoginReq
         .send(
             OPEN_STATE_UPDATE_NOTIFY,
             OpenStateUpdateNotify {
-                open_state_map: EXCEL_COLLECTION.open_state_configs
+                open_state_map: EXCEL_COLLECTION
+                    .open_state_configs
                     .iter()
                     .map(|op| (op.id, 1))
                     .collect(),
@@ -110,39 +110,20 @@ pub async fn on_player_login_req(session: &PlayerSession, _body: &PlayerLoginReq
 
     session.send(AVATAR_DATA_NOTIFY, avatar_data_notify).await?;
 
-    {
-        let mut scene = session.context.scene.borrow_mut();
-        let player = session.player_info();
+    let mut scene = session.context.scene.borrow_mut();
+    let player = session.player_info();
 
-        scene.add_avatar(
-            player
-                .avatars
-                .iter()
-                .find(|a| a.avatar_id == 10000091)
-                .unwrap()
-                .clone(),
-        );
+    scene.add_avatar(
+        player
+            .avatars
+            .iter()
+            .find(|a| a.avatar_id == 10000091)
+            .unwrap()
+            .clone(),
+    );
 
-        scene.cur_entity_id = scene.avatars.first().unwrap().get_entity_id()
-    }
-
-    let scene = session.context.scene.borrow();
-    let scene_id = scene.id();
-    let player_uid = session.player_uid();
-    let enter_scene = PlayerEnterSceneNotify {
-        scene_begin_time: 7313,
-        scene_id,
-        enter_scene_token: 15771,
-        scene_transaction: format!("{scene_id}-{player_uid}-{login_time}-179398"),
-        scene_tag_id_list: Vec::new(),
-        pos: Some(constants::INITIAL_POS.clone()),
-        prev_pos: Some(Vector::default()),
-        target_uid: player_uid,
-        r#type: EnterType::EnterSelf.into(),
-        ..Default::default()
-    };
-
-    session.send(PLAYER_ENTER_SCENE_NOTIFY, enter_scene).await?;
+    scene.cur_entity_id = scene.avatars.first().unwrap().get_entity_id();
+    scene.enter(session, EnterType::EnterSelf).await?;
 
     session
         .send(

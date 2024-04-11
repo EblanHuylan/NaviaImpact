@@ -1,24 +1,22 @@
 use proto::*;
 
 use super::*;
-use crate::{
-    data,
-    game::{constants, AvatarData},
-    util,
-};
+use crate::{data, game::AvatarData, util};
 
 pub struct SceneAvatar {
     data: AvatarData,
     weapon: SceneWeapon,
     entity_id: u32,
+    pos: Vector,
 }
 
 impl SceneAvatar {
-    pub fn new(id: u32, data: AvatarData, weapon: SceneWeapon) -> Self {
+    pub fn new(id: u32, data: AvatarData, weapon: SceneWeapon, pos: Vector) -> Self {
         Self {
             data,
             weapon,
             entity_id: calc_entity_id(id, ProtEntityType::ProtEntityAvatar),
+            pos,
         }
     }
 
@@ -85,7 +83,11 @@ impl SceneAvatar {
 
 impl Entity for SceneAvatar {
     fn get_position(&self) -> Vector {
-        constants::INITIAL_POS.clone()
+        self.pos.clone()
+    }
+
+    fn set_position(&mut self, pos: Vector) {
+        self.pos = pos
     }
 
     fn get_entity_id(&self) -> u32 {

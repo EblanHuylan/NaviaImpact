@@ -11,16 +11,16 @@ pub struct Ofcnfieofjd {
 /// CmdId: 7802
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Lejfdkbfmgo {
+pub struct MarkMapReq {
     #[prost(message, optional, tag = "4")]
-    pub leeiienppam: ::core::option::Option<Nglnpheglgn>,
+    pub mark: ::core::option::Option<MapMarkPoint>,
     #[prost(message, optional, tag = "2")]
-    pub igcjmcbldjg: ::core::option::Option<Nglnpheglgn>,
-    #[prost(enumeration = "lejfdkbfmgo::Ebneiedplpg", tag = "11")]
-    pub gfokgkdiiph: i32,
+    pub old: ::core::option::Option<MapMarkPoint>,
+    #[prost(enumeration = "mark_map_req::Operation", tag = "11")]
+    pub op: i32,
 }
-/// Nested message and enum types in `LEJFDKBFMGO`.
-pub mod lejfdkbfmgo {
+/// Nested message and enum types in `MarkMapReq`.
+pub mod mark_map_req {
     #[derive(
         Clone,
         Copy,
@@ -33,32 +33,32 @@ pub mod lejfdkbfmgo {
         ::prost::Enumeration
     )]
     #[repr(i32)]
-    pub enum Ebneiedplpg {
+    pub enum Operation {
         Add = 0,
         Mod = 1,
         Del = 2,
         Get = 3,
     }
-    impl Ebneiedplpg {
+    impl Operation {
         /// String value of the enum field names used in the ProtoBuf definition.
         ///
         /// The values are not transformed in any way and thus are considered stable
         /// (if the ProtoBuf definition does not change) and safe for programmatic use.
         pub fn as_str_name(&self) -> &'static str {
             match self {
-                Ebneiedplpg::Add => "EBNEIEDPLPG_Add",
-                Ebneiedplpg::Mod => "EBNEIEDPLPG_Mod",
-                Ebneiedplpg::Del => "EBNEIEDPLPG_Del",
-                Ebneiedplpg::Get => "EBNEIEDPLPG_Get",
+                Operation::Add => "Operation_Add",
+                Operation::Mod => "Operation_Mod",
+                Operation::Del => "Operation_Del",
+                Operation::Get => "Operation_Get",
             }
         }
         /// Creates an enum from field names used in the ProtoBuf definition.
         pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
             match value {
-                "EBNEIEDPLPG_Add" => Some(Self::Add),
-                "EBNEIEDPLPG_Mod" => Some(Self::Mod),
-                "EBNEIEDPLPG_Del" => Some(Self::Del),
-                "EBNEIEDPLPG_Get" => Some(Self::Get),
+                "Operation_Add" => Some(Self::Add),
+                "Operation_Mod" => Some(Self::Mod),
+                "Operation_Del" => Some(Self::Del),
+                "Operation_Get" => Some(Self::Get),
                 _ => None,
             }
         }
@@ -897,7 +897,7 @@ pub struct Lbhkijoadff {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Jfehnaejhal {
     #[prost(message, optional, tag = "8")]
-    pub gfokgkdiiph: ::core::option::Option<Dhiiiggagmk>,
+    pub op: ::core::option::Option<Dhiiiggagmk>,
     #[prost(uint32, tag = "14")]
     pub bbhadchkhpo: u32,
     #[prost(uint32, tag = "6")]
@@ -1657,7 +1657,7 @@ pub struct Cioinleeemn {
     #[prost(message, optional, tag = "9")]
     pub entity: ::core::option::Option<Jchhiaoepko>,
     #[prost(uint32, tag = "4")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "2")]
     pub parent_quest_id: u32,
     #[prost(bool, tag = "12")]
@@ -1889,7 +1889,7 @@ pub mod liflookhepo {
         #[prost(bool, tag = "2")]
         pub knelagpemhm: bool,
         #[prost(uint32, tag = "12")]
-        pub aagijbfjkak: u32,
+        pub quest_id: u32,
         #[prost(uint32, tag = "13")]
         pub mjlibgicacg: u32,
     }
@@ -2893,7 +2893,7 @@ pub struct AvatarEnterSceneInfo {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Gndfiidbgmp {
     #[prost(uint32, tag = "11")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "8")]
     pub entity_id: u32,
     #[prost(uint32, tag = "3")]
@@ -4554,7 +4554,7 @@ pub struct Odgpempeeml {}
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Ioandanhmjl {
     #[prost(uint32, tag = "5")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "13")]
     pub state: u32,
     #[prost(uint32, tag = "10")]
@@ -7658,7 +7658,7 @@ pub struct Mhjfbnaniha {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Kijebomljgi {
     #[prost(uint32, tag = "10")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -9906,7 +9906,7 @@ pub struct Cjpkmhnbijb {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Hiipehiplhj {
     #[prost(uint32, tag = "11")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -10639,7 +10639,7 @@ pub struct Ngjmlhicoll {
     #[prost(uint32, repeated, tag = "15")]
     pub apkobinehkb: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "13")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -11161,7 +11161,7 @@ pub struct Aedbjmepaba {
     #[prost(enumeration = "aedbjmepaba::Adpedjjijdd", tag = "11")]
     pub state: i32,
     #[prost(uint32, tag = "14")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "2")]
     pub omeiljenicn: u32,
     #[prost(uint32, tag = "7")]
@@ -11354,7 +11354,7 @@ pub struct Kakehjmiglh {
     #[prost(bool, tag = "12")]
     pub gflglppegjk: bool,
     #[prost(uint32, tag = "10")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "6")]
     pub phkohddafpa: u32,
 }
@@ -11369,7 +11369,7 @@ pub struct Fimhcnhplhd {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Hjeadllmbbc {
     #[prost(message, optional, tag = "1")]
-    pub leeiienppam: ::core::option::Option<Pcoldcbnbbg>,
+    pub mark: ::core::option::Option<Pcoldcbnbbg>,
 }
 /// CmdId: 7902
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -12436,7 +12436,7 @@ pub struct Lbohlcbepfl {
     #[prost(uint32, repeated, tag = "13")]
     pub kfgbjkgenfi: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "12")]
-    pub jfboglilobd: ::prost::alloc::vec::Vec<Pcoldcbnbbg>,
+    pub mark_list: ::prost::alloc::vec::Vec<Pcoldcbnbbg>,
     #[prost(bool, tag = "10")]
     pub abjicjkehah: bool,
     #[prost(bool, tag = "15")]
@@ -12485,7 +12485,7 @@ pub struct Ecackgngdhj {
     #[prost(uint32, repeated, tag = "2")]
     pub djhgadgnhno: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "5")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 /// CmdId: 23261
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -12906,7 +12906,7 @@ pub struct Iheaahkbchn {
     #[prost(int32, tag = "13")]
     pub retcode: i32,
     #[prost(enumeration = "Cpmhcibnkmj", tag = "5")]
-    pub gfokgkdiiph: i32,
+    pub op: i32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -13940,7 +13940,7 @@ pub struct Klbpjpiiijp {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Chgengfloag {
     #[prost(uint32, tag = "3")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "4")]
     pub nohiaaphhkf: u32,
     #[prost(uint32, tag = "5")]
@@ -14447,7 +14447,7 @@ pub struct Gdjlgibbiih {
     #[prost(message, repeated, tag = "6")]
     pub eniaoadffpi: ::prost::alloc::vec::Vec<Bnfbjeajcko>,
     #[prost(uint32, tag = "5")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(bool, tag = "1")]
     pub pfnlioenalo: bool,
     #[prost(bool, tag = "3")]
@@ -14916,7 +14916,7 @@ pub struct Hhmppapdmkg {
     #[prost(uint32, tag = "5")]
     pub entity_id: u32,
     #[prost(uint32, tag = "12")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 /// CmdId: 24087
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -15019,7 +15019,7 @@ pub struct Kanbpggkemd {
     #[prost(uint32, tag = "7")]
     pub jjgeokjgeej: u32,
     #[prost(enumeration = "Cpmhcibnkmj", tag = "14")]
-    pub gfokgkdiiph: i32,
+    pub op: i32,
 }
 /// CmdId: 21626
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -17571,7 +17571,7 @@ pub struct Hhhcenhoddn {
     #[prost(int32, tag = "7")]
     pub retcode: i32,
     #[prost(uint32, tag = "12")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -18501,9 +18501,9 @@ pub struct Omggbmjfkpe {
 /// CmdId: 25569
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Kpdddliagai {
+pub struct MarkMapRsp {
     #[prost(message, repeated, tag = "14")]
-    pub jfboglilobd: ::prost::alloc::vec::Vec<Nglnpheglgn>,
+    pub mark_list: ::prost::alloc::vec::Vec<MapMarkPoint>,
     #[prost(int32, tag = "4")]
     pub retcode: i32,
 }
@@ -19216,7 +19216,7 @@ pub struct Jpeajcodfbe {
     #[prost(message, repeated, tag = "12")]
     pub jnanlopjgmc: ::prost::alloc::vec::Vec<Kphngndmonk>,
     #[prost(uint32, tag = "6")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -20193,7 +20193,7 @@ pub struct Ieghhfjhfpa {
     #[prost(uint32, tag = "8")]
     pub okdlgpaafhc: u32,
     #[prost(uint32, tag = "1")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(bool, tag = "5")]
     pub mbfgongjfdn: bool,
     #[prost(uint32, tag = "7")]
@@ -21390,7 +21390,7 @@ pub struct Flmmpoonphk {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Jekhiockaad {
     #[prost(uint32, tag = "14")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(int32, tag = "7")]
     pub retcode: i32,
 }
@@ -22779,7 +22779,7 @@ pub struct Fmjcacaffmk {
     #[prost(message, optional, tag = "5")]
     pub aobjhjihjdn: ::core::option::Option<Bocelbglbdb>,
     #[prost(enumeration = "Cpmhcibnkmj", tag = "3")]
-    pub gfokgkdiiph: i32,
+    pub op: i32,
 }
 /// CmdId: 8028
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -26287,7 +26287,7 @@ pub struct Afkfhplmfmb {
     #[prost(message, repeated, tag = "7")]
     pub nniilnfgjjb: ::prost::alloc::vec::Vec<Odlbcgmecnm>,
     #[prost(uint32, tag = "10")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "15")]
     pub parent_quest_id: u32,
     #[prost(uint32, tag = "12")]
@@ -26300,7 +26300,7 @@ pub struct Nehfkmeooha {
     #[prost(uint32, tag = "4")]
     pub abbofbbkapb: u32,
     #[prost(uint32, tag = "3")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "10")]
     pub parent_quest_id: u32,
     #[prost(int32, tag = "6")]
@@ -27062,7 +27062,7 @@ pub mod onheihnjnka {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Lhebfcljnla {
     #[prost(uint32, tag = "10")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -28774,7 +28774,7 @@ pub struct Dfdipgagjcm {
     #[prost(message, repeated, tag = "6")]
     pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "2")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 /// CmdId: 22510
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -29533,23 +29533,23 @@ pub mod dkbchkjeeie {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Nglnpheglgn {
+pub struct MapMarkPoint {
     #[prost(message, optional, tag = "3")]
     pub pos: ::core::option::Option<Vector>,
     #[prost(string, tag = "2")]
     pub name: ::prost::alloc::string::String,
-    #[prost(enumeration = "Lkabjppedih", tag = "4")]
-    pub fcjglbamakh: i32,
+    #[prost(enumeration = "MapMarkPointType", tag = "4")]
+    pub point_type: i32,
     #[prost(uint32, tag = "5")]
     pub monster_id: u32,
     #[prost(uint32, tag = "1")]
     pub scene_id: u32,
-    #[prost(enumeration = "Dknbdkbcpjo", tag = "6")]
-    pub nimceenhdkm: i32,
+    #[prost(enumeration = "MapMarkFromType", tag = "6")]
+    pub from_type: i32,
     #[prost(uint32, tag = "8")]
     pub emolgaafllp: u32,
     #[prost(uint32, tag = "7")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 /// CmdId: 29498
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -29622,7 +29622,7 @@ pub struct Kmpccabkcee {}
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dkelhcecdpo {
     #[prost(uint32, tag = "7")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "11")]
     pub homjegjkgom: u32,
     #[prost(int32, tag = "2")]
@@ -31110,7 +31110,7 @@ pub mod kigbchgjdha {
         #[prost(uint32, tag = "10")]
         pub dloklkcahpp: u32,
         #[prost(uint32, tag = "8")]
-        pub aagijbfjkak: u32,
+        pub quest_id: u32,
     }
     #[derive(
         Clone,
@@ -32507,7 +32507,7 @@ pub struct Ifnokkffbio {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Eapmidblefj {
     #[prost(uint32, tag = "13")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
     #[prost(uint32, tag = "1")]
     pub homjegjkgom: u32,
 }
@@ -32667,7 +32667,7 @@ pub struct Ggjbdcnoaih {
     #[prost(uint32, tag = "12")]
     pub entity_id: u32,
     #[prost(uint32, tag = "11")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 /// CmdId: 2656
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -33099,7 +33099,7 @@ pub struct Hcgfamcmiij {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Glccangogea {
     #[prost(message, repeated, tag = "11")]
-    pub jfboglilobd: ::prost::alloc::vec::Vec<Nglnpheglgn>,
+    pub mark_list: ::prost::alloc::vec::Vec<MapMarkPoint>,
 }
 /// CmdId: 21238
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -35394,14 +35394,14 @@ pub mod hnmiejbjimb {
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dhiiiggagmk {
-    #[prost(oneof = "dhiiiggagmk::Gfokgkdiiph", tags = "5, 9, 15, 3, 4, 7, 13, 14")]
-    pub gfokgkdiiph: ::core::option::Option<dhiiiggagmk::Gfokgkdiiph>,
+    #[prost(oneof = "dhiiiggagmk::Op", tags = "5, 9, 15, 3, 4, 7, 13, 14")]
+    pub op: ::core::option::Option<dhiiiggagmk::Op>,
 }
 /// Nested message and enum types in `DHIIIGGAGMK`.
 pub mod dhiiiggagmk {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Gfokgkdiiph {
+    pub enum Op {
         #[prost(message, tag = "5")]
         OpRedraw(super::Mecblnblbbo),
         #[prost(message, tag = "9")]
@@ -35833,7 +35833,7 @@ pub struct Mfokkhgaodh {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Eafhmdmlolm {
     #[prost(uint32, tag = "9")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 /// CmdId: 26723
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -38229,7 +38229,7 @@ pub struct Nkkhbleilch {
     #[prost(uint32, tag = "8")]
     pub phijcmelhfb: u32,
     #[prost(uint32, tag = "9")]
-    pub gfokgkdiiph: u32,
+    pub op: u32,
     #[prost(uint32, tag = "7")]
     pub pggehhnihod: u32,
     #[prost(uint32, tag = "4")]
@@ -38829,7 +38829,7 @@ pub struct Flcbabihdlm {
     #[prost(int32, tag = "15")]
     pub retcode: i32,
     #[prost(uint32, tag = "6")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -40242,7 +40242,7 @@ pub struct Ffdgmjklonk {
     #[prost(uint32, tag = "5")]
     pub jablkfbjnhp: u32,
     #[prost(uint32, tag = "4")]
-    pub aagijbfjkak: u32,
+    pub quest_id: u32,
 }
 /// CmdId: 8708
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -41151,7 +41151,7 @@ pub struct Eimfhonjiim {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Ajngpjibnja {
     #[prost(message, repeated, tag = "13")]
-    pub jfboglilobd: ::prost::alloc::vec::Vec<Nglnpheglgn>,
+    pub mark_list: ::prost::alloc::vec::Vec<MapMarkPoint>,
     #[prost(int32, tag = "8")]
     pub retcode: i32,
 }
@@ -42638,7 +42638,7 @@ pub struct Bcpdiknpmbm {
     #[prost(uint32, tag = "5")]
     pub entity_id: u32,
     #[prost(uint32, tag = "8")]
-    pub gfokgkdiiph: u32,
+    pub op: u32,
     #[prost(uint32, tag = "13")]
     pub pggehhnihod: u32,
 }
@@ -45312,7 +45312,7 @@ pub struct Mdjhiogomni {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Koepofignoh {
     #[prost(message, repeated, tag = "7")]
-    pub jfboglilobd: ::prost::alloc::vec::Vec<Nglnpheglgn>,
+    pub mark_list: ::prost::alloc::vec::Vec<MapMarkPoint>,
 }
 /// CmdId: 7884
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -47733,29 +47733,29 @@ impl Lihghmndadc {
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum Dknbdkbcpjo {
+pub enum MapMarkFromType {
     Noe = 0,
     Monster = 1,
     Quest = 2,
 }
-impl Dknbdkbcpjo {
+impl MapMarkFromType {
     /// String value of the enum field names used in the ProtoBuf definition.
     ///
     /// The values are not transformed in any way and thus are considered stable
     /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
-            Dknbdkbcpjo::Noe => "DKNBDKBCPJO_Noe",
-            Dknbdkbcpjo::Monster => "DKNBDKBCPJO_Monster",
-            Dknbdkbcpjo::Quest => "DKNBDKBCPJO_Quest",
+            MapMarkFromType::Noe => "MapMarkFromType_Noe",
+            MapMarkFromType::Monster => "MapMarkFromType_Monster",
+            MapMarkFromType::Quest => "MapMarkFromType_Quest",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
     pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
         match value {
-            "DKNBDKBCPJO_Noe" => Some(Self::Noe),
-            "DKNBDKBCPJO_Monster" => Some(Self::Monster),
-            "DKNBDKBCPJO_Quest" => Some(Self::Quest),
+            "MapMarkFromType_Noe" => Some(Self::Noe),
+            "MapMarkFromType_Monster" => Some(Self::Monster),
+            "MapMarkFromType_Quest" => Some(Self::Quest),
             _ => None,
         }
     }
@@ -49134,7 +49134,7 @@ impl Hmpljgiladb {
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum Lkabjppedih {
+pub enum MapMarkPointType {
     Npc = 0,
     Quest = 1,
     Special = 2,
@@ -49143,32 +49143,32 @@ pub enum Lkabjppedih {
     Monster = 5,
     FishPool = 6,
 }
-impl Lkabjppedih {
+impl MapMarkPointType {
     /// String value of the enum field names used in the ProtoBuf definition.
     ///
     /// The values are not transformed in any way and thus are considered stable
     /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
-            Lkabjppedih::Npc => "LKABJPPEDIH_Npc",
-            Lkabjppedih::Quest => "LKABJPPEDIH_Quest",
-            Lkabjppedih::Special => "LKABJPPEDIH_Special",
-            Lkabjppedih::Mine => "LKABJPPEDIH_Mine",
-            Lkabjppedih::Collection => "LKABJPPEDIH_Collection",
-            Lkabjppedih::Monster => "LKABJPPEDIH_Monster",
-            Lkabjppedih::FishPool => "LKABJPPEDIH_FishPool",
+            MapMarkPointType::Npc => "MapMarkPointType_Npc",
+            MapMarkPointType::Quest => "MapMarkPointType_Quest",
+            MapMarkPointType::Special => "MapMarkPointType_Special",
+            MapMarkPointType::Mine => "MapMarkPointType_Mine",
+            MapMarkPointType::Collection => "MapMarkPointType_Collection",
+            MapMarkPointType::Monster => "MapMarkPointType_Monster",
+            MapMarkPointType::FishPool => "MapMarkPointType_FishPool",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
     pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
         match value {
-            "LKABJPPEDIH_Npc" => Some(Self::Npc),
-            "LKABJPPEDIH_Quest" => Some(Self::Quest),
-            "LKABJPPEDIH_Special" => Some(Self::Special),
-            "LKABJPPEDIH_Mine" => Some(Self::Mine),
-            "LKABJPPEDIH_Collection" => Some(Self::Collection),
-            "LKABJPPEDIH_Monster" => Some(Self::Monster),
-            "LKABJPPEDIH_FishPool" => Some(Self::FishPool),
+            "MapMarkPointType_Npc" => Some(Self::Npc),
+            "MapMarkPointType_Quest" => Some(Self::Quest),
+            "MapMarkPointType_Special" => Some(Self::Special),
+            "MapMarkPointType_Mine" => Some(Self::Mine),
+            "MapMarkPointType_Collection" => Some(Self::Collection),
+            "MapMarkPointType_Monster" => Some(Self::Monster),
+            "MapMarkPointType_FishPool" => Some(Self::FishPool),
             _ => None,
         }
     }
