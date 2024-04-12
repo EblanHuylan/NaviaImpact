@@ -1986,11 +1986,11 @@ pub mod oojabholigi {
 /// CmdId: 25960
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Cjanmienhbl {
+pub struct AvatarWearFlycloakRsp {
     #[prost(uint64, tag = "2")]
     pub avatar_guid: u64,
     #[prost(uint32, tag = "7")]
-    pub kljbfbpndna: u32,
+    pub flycloak_id: u32,
     #[prost(int32, tag = "5")]
     pub retcode: i32,
 }
@@ -13254,7 +13254,7 @@ pub struct Oaigllmcelh {
 /// CmdId: 24368
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Hjinepcidjh {
+pub struct AvatarChangeCostumeReq {
     #[prost(uint32, tag = "10")]
     pub costume_id: u32,
     #[prost(uint64, tag = "6")]
@@ -19231,9 +19231,9 @@ pub struct Aiibeahbkhc {
 /// CmdId: 27466
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Hhlkjbhphip {
+pub struct AvatarWearFlycloakReq {
     #[prost(uint32, tag = "12")]
-    pub kljbfbpndna: u32,
+    pub flycloak_id: u32,
     #[prost(uint64, tag = "6")]
     pub avatar_guid: u64,
 }
@@ -19338,9 +19338,9 @@ pub struct Hdjnkgeffje {
 /// CmdId: 8370
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Igbfidbinoi {
+pub struct AvatarChangeCostumeNotify {
     #[prost(message, optional, tag = "14")]
-    pub egoffcgnheo: ::core::option::Option<SceneEntityInfo>,
+    pub entity_info: ::core::option::Option<SceneEntityInfo>,
 }
 /// CmdId: 28319
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -31064,7 +31064,7 @@ pub struct Mfdepinclgn {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Inpoaflcccj {
     #[prost(uint32, tag = "5")]
-    pub kljbfbpndna: u32,
+    pub flycloak_id: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -35604,7 +35604,7 @@ pub struct Pcjmneheebn {
 /// CmdId: 21748
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Jckkocbhhfm {
+pub struct AvatarChangeCostumeRsp {
     #[prost(uint64, tag = "5")]
     pub avatar_guid: u64,
     #[prost(uint32, tag = "3")]
@@ -36775,9 +36775,9 @@ pub struct Hggggikbdml {
 /// CmdId: 23818
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Nmkabkacpjo {
+pub struct AvatarFlycloakChangeNotify {
     #[prost(uint32, tag = "12")]
-    pub kljbfbpndna: u32,
+    pub flycloak_id: u32,
     #[prost(uint64, tag = "11")]
     pub avatar_guid: u64,
 }
@@ -43180,6 +43180,10 @@ pub struct AvatarDataNotify {
     pub cur_avatar_team_id: u32,
     #[prost(map = "uint32, message", tag = "12")]
     pub avatar_team_map: ::std::collections::HashMap<u32, AvatarTeam>,
+    #[prost(uint32, repeated, tag = "15")]
+    pub owned_flycloak_list: ::prost::alloc::vec::Vec<u32>,
+    #[prost(uint32, repeated, tag = "13")]
+    pub owned_costume_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "14")]
     pub avatar_list: ::prost::alloc::vec::Vec<AvatarInfo>,
 }

@@ -138,4 +138,6 @@ trait_handler! {
     EvtAvatarStandUpNotify 8549;
     MarkMapReq 7802;
     GetSceneAreaReq 5114;
+    AvatarChangeCostumeReq 24368;
+    AvatarWearFlycloakReq 27466;
 }

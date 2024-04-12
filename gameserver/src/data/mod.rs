@@ -20,6 +20,8 @@ lazy_static! {
 
 pub struct ExcelCollection {
     pub avatar_configs: Vec<AvatarExcelConfig>,
+    pub avatar_flycloak_configs: Vec<AvatarFlycloakExcelConfig>,
+    pub avatar_costume_configs: Vec<AvatarCostumeExcelConfig>,
     pub open_state_configs: Vec<OpenStateConfig>,
 }
 
@@ -34,6 +36,14 @@ impl ExcelCollection {
                 "assets/ExcelBinOutput/AvatarExcelConfigData.json",
             ))
             .unwrap(),
+            avatar_flycloak_configs: from_str(&load_asset(
+                "assets/ExcelBinOutput/AvatarFlycloakExcelConfigData.json",
+            ))
+            .unwrap(),
+            avatar_costume_configs: from_str(&load_asset(
+                "assets/ExcelBinOutput/AvatarCostumeExcelConfigData.json",
+            ))
+            .unwrap(),
             open_state_configs: from_str(&load_asset(
                 "assets/ExcelBinOutput/OpenStateConfigData.json",
             ))
@@ -42,7 +52,7 @@ impl ExcelCollection {
     }
 
     pub fn table_count(&self) -> usize {
-        2
+        4
     }
 }
 

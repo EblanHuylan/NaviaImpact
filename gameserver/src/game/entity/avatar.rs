@@ -25,6 +25,14 @@ impl SceneAvatar {
         self.data.clone()
     }
 
+    pub fn update_data(&mut self, data: &AvatarData) {
+        self.data = AvatarData {
+            properties: self.data.properties.clone(),
+            fight_properties: self.data.fight_properties.clone(),
+            ..data.clone()
+        };
+    }
+
     pub fn avatar_guid(&self) -> u64 {
         self.data.guid
     }
@@ -132,6 +140,7 @@ impl Entity for SceneAvatar {
                 skill_depot_id: self.data.skill_depot_id,
                 weapon: Some(self.weapon.scene_weapon_info()),
                 team_resonance_list: vec![10301],
+                costume_id: self.data.costume_id,
                 wearing_flycloak_id: self.data.wearing_flycloak_id,
                 born_time: self.data.born_time,
                 excel_info: Some(AvatarExcelInfo::default()),

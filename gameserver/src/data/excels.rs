@@ -40,6 +40,41 @@ pub struct AvatarExcelConfig {
 #[derive(Deserialize, Default)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
+pub struct AvatarCostumeExcelConfig {
+    pub skin_id: u32,
+    #[serde(rename = "indexID")]
+    pub index_id: u32,
+    pub name_text_map_hash: u64,
+    pub desc_text_map_hash: u64,
+    pub item_id: u32,
+    pub character_id: u32,
+    pub json_name: String,
+    pub prefab_path_hash: u64,
+    pub prefab_remote_path_hash: u64,
+    pub prefab_npc_path_hash: u64,
+    pub prefab_manekin_path_hash: u64,
+    pub quality: u32,
+    pub front_icon_name: String,
+    pub side_icon_name: String,
+    pub image_name_hash: u64,
+}
+
+#[derive(Deserialize, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
+pub struct AvatarFlycloakExcelConfig {
+    pub flycloak_id: u32,
+    pub name_text_map_hash: u64,
+    pub desc_text_map_hash: u64,
+    pub prefab_path: String,
+    pub json_name: String,
+    pub icon: String,
+    pub material_id: u32,
+}
+
+#[derive(Deserialize, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct OpenStateConfig {
     pub id: u32,
     pub default_state: bool,

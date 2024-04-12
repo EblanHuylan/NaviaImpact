@@ -15,6 +15,7 @@ pub struct AvatarData {
     pub avatar_id: u32,
     pub skill_depot_id: u32,
     pub wearing_flycloak_id: u32,
+    pub costume_id: u32,
     pub born_time: u32,
     pub weapon: WeaponData,
     pub properties: Vec<PropValue>,
@@ -52,6 +53,7 @@ impl PlayerInfo {
                 avatar_id: config.id,
                 skill_depot_id: config.skill_depot_id,
                 wearing_flycloak_id: 140001,
+                costume_id: 0,
                 born_time: util::cur_timestamp() as u32,
                 weapon: WeaponData {
                     guid: self.next_guid(),
@@ -161,6 +163,7 @@ impl From<AvatarData> for AvatarInfo {
             avatar_id: value.avatar_id,
             skill_depot_id: value.skill_depot_id,
             wearing_flycloak_id: value.wearing_flycloak_id,
+            costume_id: value.costume_id,
             born_time: value.born_time,
             life_state: 1,
             avatar_type: 1,

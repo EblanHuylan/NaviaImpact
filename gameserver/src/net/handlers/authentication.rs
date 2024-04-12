@@ -105,6 +105,16 @@ pub async fn on_player_login_req(session: &PlayerSession, _body: &PlayerLoginReq
                 team_name: String::from("LogicTeam"),
             },
         )]),
+        owned_costume_list: EXCEL_COLLECTION
+            .avatar_costume_configs
+            .iter()
+            .map(|a| a.skin_id)
+            .collect(),
+        owned_flycloak_list: EXCEL_COLLECTION
+            .avatar_flycloak_configs
+            .iter()
+            .map(|a| a.flycloak_id)
+            .collect(),
         ..Default::default()
     };
 

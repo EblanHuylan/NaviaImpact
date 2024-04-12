@@ -37,10 +37,7 @@ pub fn xor(bytes: &mut [u8], key: &[u8]) {
 }
 
 pub fn hash_str(value: &str) -> u32 {
-    let mut hash = 0;
-    value
-        .chars()
-        .for_each(|c| hash = (((c as u64) + 131 * hash as u64) & 0xFFFFFFFF) as u32);
-
-    hash
+    value.chars().fold(0, |hash, c| {
+        (((c as u64) + 131 * hash as u64) & 0xFFFFFFFF) as u32
+    })
 }

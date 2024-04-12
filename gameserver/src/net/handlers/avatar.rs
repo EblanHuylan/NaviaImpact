@@ -33,6 +33,112 @@ pub async fn on_change_avatar_req(session: &PlayerSession, body: &ChangeAvatarRe
         .await
 }
 
+pub async fn on_avatar_change_costume_req(
+    session: &PlayerSession,
+    body: &AvatarChangeCostumeReq,
+) -> Result<()> {
+    let mut player = session.player_info_mut();
+    let Some(avatar) = player
+        .avatars
+        .iter_mut()
+        .find(|a| a.guid == body.avatar_guid)
+    else {
+        return session
+            .send(
+                AVATAR_CHANGE_COSTUME_RSP,
+                AvatarChangeCostumeRsp {
+                    retcode: -1,
+                    ..Default::default()
+                },
+            )
+            .await;
+    };
+
+    avatar.costume_id = body.costume_id;
+
+    let mut scene = session.context.scene.borrow_mut();
+    if let Some(avatar_entity) = scene
+        .avatars
+        .iter_mut()
+        .find(|a| a.avatar_guid() == body.avatar_guid)
+    {
+        avatar_entity.update_data(avatar);
+        session
+            .send(
+                AVATAR_CHANGE_COSTUME_NOTIFY,
+                AvatarChangeCostumeNotify {
+                    entity_info: Some(avatar_entity.info()),
+                },
+            )
+            .await?;
+    }
+
+    session
+        .send(
+            AVATAR_CHANGE_COSTUME_RSP,
+            AvatarChangeCostumeRsp {
+                avatar_guid: body.avatar_guid,
+                costume_id: body.costume_id,
+                retcode: 0,
+            },
+        )
+        .await
+}
+
+pub async fn on_avatar_wear_flycloak_req(
+    session: &PlayerSession,
+    body: &AvatarWearFlycloakReq,
+) -> Result<()> {
+    let mut player = session.player_info_mut();
+    let Some(avatar) = player
+        .avatars
+        .iter_mut()
+        .find(|a| a.guid == body.avatar_guid)
+    else {
+        return session
+            .send(
+                AVATAR_WEAR_FLYCLOAK_RSP,
+                AvatarWearFlycloakRsp {
+                    retcode: -1,
+                    ..Default::default()
+                },
+            )
+            .await;
+    };
+
+    avatar.wearing_flycloak_id = body.flycloak_id;
+
+    let mut scene = session.context.scene.borrow_mut();
+    if let Some(avatar_entity) = scene
+        .avatars
+        .iter_mut()
+        .find(|a| a.avatar_guid() == body.avatar_guid)
+    {
+        avatar_entity.update_data(avatar);
+    }
+
+    session
+        .send(
+            AVATAR_FLYCLOAK_CHANGE_NOTIFY,
+            AvatarFlycloakChangeNotify {
+                avatar_guid: body.avatar_guid,
+                flycloak_id: body.flycloak_id,
+            },
+        )
+        .await?;
+
+    session
+        .send(
+            AVATAR_WEAR_FLYCLOAK_RSP,
+            AvatarWearFlycloakRsp {
+                retcode: 0,
+                avatar_guid: body.avatar_guid,
+                flycloak_id: body.flycloak_id,
+            },
+        )
+        .await
+}
+
 pub async fn on_set_up_avatar_team_req(
     session: &PlayerSession,
     body: &SetUpAvatarTeamReq,
