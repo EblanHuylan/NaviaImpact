@@ -1,7 +1,11 @@
 use proto::*;
 
 use super::*;
-use crate::{data, game::AvatarData, util};
+use crate::{
+    data,
+    game::{AvatarData, WeaponData},
+    util,
+};
 
 pub struct SceneAvatar {
     data: AvatarData,
@@ -55,6 +59,10 @@ impl SceneAvatar {
             idkfhmfdofd: Some(AbilitySyncStateInfo::default()),
             ..Default::default()
         }
+    }
+
+    pub fn change_weapon(&mut self, weapon: WeaponData) {
+        self.weapon = SceneWeapon::new(self.weapon.get_entity_id(), weapon);
     }
 
     pub fn ability_control_block(&self) -> AbilityControlBlock {

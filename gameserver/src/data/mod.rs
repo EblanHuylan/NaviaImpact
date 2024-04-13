@@ -22,6 +22,7 @@ pub struct ExcelCollection {
     pub avatar_configs: Vec<AvatarExcelConfig>,
     pub avatar_flycloak_configs: Vec<AvatarFlycloakExcelConfig>,
     pub avatar_costume_configs: Vec<AvatarCostumeExcelConfig>,
+    pub weapon_configs: Vec<WeaponExcelConfig>,
     pub open_state_configs: Vec<OpenStateConfig>,
 }
 
@@ -44,6 +45,10 @@ impl ExcelCollection {
                 "assets/ExcelBinOutput/AvatarCostumeExcelConfigData.json",
             ))
             .unwrap(),
+            weapon_configs: from_str(&load_asset(
+                "assets/ExcelBinOutput/WeaponExcelConfigData.json",
+            ))
+            .unwrap(),
             open_state_configs: from_str(&load_asset(
                 "assets/ExcelBinOutput/OpenStateConfigData.json",
             ))
@@ -52,7 +57,7 @@ impl ExcelCollection {
     }
 
     pub fn table_count(&self) -> usize {
-        4
+        5
     }
 }
 

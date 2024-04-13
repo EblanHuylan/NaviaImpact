@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 use super::*;
-use crate::game::entity::Entity;
+use crate::game::entity::{Entity, SceneWeapon};
 
 pub async fn on_change_avatar_req(session: &PlayerSession, body: &ChangeAvatarReq) -> Result<()> {
     let mut scene = session.context.scene.borrow_mut();
@@ -134,6 +134,70 @@ pub async fn on_avatar_wear_flycloak_req(
                 retcode: 0,
                 avatar_guid: body.avatar_guid,
                 flycloak_id: body.flycloak_id,
+            },
+        )
+        .await
+}
+
+pub async fn on_wear_equip_req(session: &PlayerSession, body: &WearEquipReq) -> Result<()> {
+    let mut player = session.player_info_mut();
+
+    let weapon = player
+        .weapons
+        .iter()
+        .find(|w| w.guid == body.equip_guid)
+        .map(|w| w.clone());
+
+    let avatar = player
+        .avatars
+        .iter_mut()
+        .find(|a| a.guid == body.avatar_guid);
+
+    let (Some(weapon), Some(avatar)) = (weapon, avatar) else {
+        return session
+            .send(
+                WEAR_EQUIP_RSP,
+                WearEquipRsp {
+                    retcode: -1,
+                    ..Default::default()
+                },
+            )
+            .await;
+    };
+
+    avatar.weapon = weapon;
+
+    session
+        .send(
+            AVATAR_EQUIP_CHANGE_NOTIFY,
+            AvatarEquipChangeNotify {
+                avatar_guid: body.avatar_guid,
+                equip_guid: body.equip_guid,
+                item_id: avatar.weapon.weapon_id,
+                equip_type: 6,
+                weapon: Some(SceneWeapon::new(0, avatar.weapon.clone()).scene_weapon_info()),
+                reliquary: None,
+            },
+        )
+        .await?;
+
+    let mut scene = session.context.scene.borrow_mut();
+    if let Some(avatar_entity) = scene
+        .avatars
+        .iter_mut()
+        .find(|a| a.avatar_guid() == body.avatar_guid)
+    {
+        avatar_entity.update_data(&avatar);
+        avatar_entity.change_weapon(avatar.weapon.clone());
+    }
+
+    session
+        .send(
+            WEAR_EQUIP_RSP,
+            WearEquipRsp {
+                retcode: 0,
+                equip_guid: body.equip_guid,
+                avatar_guid: body.avatar_guid,
             },
         )
         .await

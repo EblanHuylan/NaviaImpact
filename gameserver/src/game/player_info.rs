@@ -7,6 +7,7 @@ pub struct PlayerInfo {
     pub uid: u32,
     pub guid_manager: GUIDManager,
     pub avatars: Vec<AvatarData>,
+    pub weapons: Vec<WeaponData>,
 }
 
 #[derive(Clone)]
@@ -35,11 +36,20 @@ impl PlayerInfo {
             uid: 1337,
             guid_manager: GUIDManager::new(),
             avatars: Vec::new(),
+            weapons: Vec::new(),
         }
     }
 
     pub fn next_guid(&self) -> u64 {
         self.guid_manager.next()
+    }
+
+    pub fn unlock_all_weapons(&mut self) {
+        self.weapons
+            .extend(EXCEL_COLLECTION.weapon_configs.iter().map(|w| WeaponData {
+                weapon_id: w.id,
+                guid: self.guid_manager.next(),
+            }));
     }
 
     pub fn unlock_all_avatars(&mut self) {
@@ -48,6 +58,12 @@ impl PlayerInfo {
             .iter()
             .filter(|c| !DISABLED_AVATAR_LIST.contains(&c.id))
         {
+            let weapon = WeaponData {
+                weapon_id: config.initial_weapon,
+                guid: self.next_guid(),
+            };
+            self.weapons.push(weapon.clone());
+
             let mut data = AvatarData {
                 guid: self.next_guid(),
                 avatar_id: config.id,
@@ -55,10 +71,7 @@ impl PlayerInfo {
                 wearing_flycloak_id: 140001,
                 costume_id: 0,
                 born_time: util::cur_timestamp() as u32,
-                weapon: WeaponData {
-                    guid: self.next_guid(),
-                    weapon_id: config.initial_weapon,
-                },
+                weapon,
                 properties: Vec::new(),
                 fight_properties: Vec::new(),
             };
@@ -152,6 +165,22 @@ impl AvatarData {
             fight_prop.prop_value
         } else {
             0.0
+        }
+    }
+}
+
+impl From<WeaponData> for Item {
+    fn from(value: WeaponData) -> Self {
+        Self {
+            item_id: value.weapon_id,
+            guid: value.guid,
+            detail: Some(item::Detail::Equip(Equip {
+                is_locked: false,
+                detail: Some(equip::Detail::Weapon(Weapon {
+                    level: 1,
+                    ..Default::default()
+                })),
+            })),
         }
     }
 }

@@ -38,6 +38,7 @@ pub async fn on_get_player_token_req(
 
 pub async fn on_player_login_req(session: &PlayerSession, _body: &PlayerLoginReq) -> Result<()> {
     session.player_info_mut().unlock_all_avatars();
+    session.player_info_mut().unlock_all_weapons();
 
     let props = [
         (PROP_PLAYER_LEVEL, 5),
@@ -83,11 +84,28 @@ pub async fn on_player_login_req(session: &PlayerSession, _body: &PlayerLoginReq
         .await?;
 
     let player_info = session.player_info();
+
+    let player_store_notify = PlayerStoreNotify {
+        weight_limit: 30000,
+        store_type: StoreType::StorePack.into(),
+        item_list: player_info
+            .weapons
+            .clone()
+            .into_iter()
+            .map(Item::from)
+            .collect(),
+    };
+
+    session
+        .send(PLAYER_STORE_NOTIFY, player_store_notify)
+        .await?;
+
     let avatar_data_notify = AvatarDataNotify {
         avatar_list: player_info
             .avatars
-            .iter()
-            .map(|a| Into::<AvatarInfo>::into(a.clone()))
+            .clone()
+            .into_iter()
+            .map(AvatarInfo::from)
             .collect(),
         cur_avatar_team_id: 1,
         choose_avatar_guid: 228,

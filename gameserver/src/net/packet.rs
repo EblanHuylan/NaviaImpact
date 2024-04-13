@@ -140,4 +140,5 @@ trait_handler! {
     GetSceneAreaReq 5114;
     AvatarChangeCostumeReq 24368;
     AvatarWearFlycloakReq 27466;
+    WearEquipReq 21829;
 }

@@ -75,6 +75,45 @@ pub struct AvatarFlycloakExcelConfig {
 #[derive(Deserialize, Default)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
+pub struct WeaponExcelConfig {
+    pub weapon_type: String,
+    pub rank_level: u32,
+    pub weapon_base_exp: u32,
+    pub skill_affix: Vec<u32>,
+    pub weapon_prop: Vec<WeaponProp>,
+    pub awaken_texture: String,
+    pub awaken_light_map_texture: String,
+    pub awaken_icon: String,
+    pub weapon_promote_id: u32,
+    pub story_id: u32,
+    pub awaken_costs: Vec<u32>,
+    pub gacha_card_name_hash: u64,
+    pub destroy_rule: String,
+    pub destroy_return_material: Vec<u32>,
+    pub destroy_return_material_count: Vec<u32>,
+    pub id: u32,
+    pub name_text_map_hash: u64,
+    pub desc_text_map_hash: u64,
+    pub icon: String,
+    pub item_type: String,
+    pub weight: u32,
+    pub rank: u32,
+    pub gadget_id: u32,
+}
+
+#[derive(Deserialize, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
+pub struct WeaponProp {
+    pub prop_type: String,
+    pub init_value: f32,
+    #[serde(rename = "type")]
+    pub type_field: String,
+}
+
+#[derive(Deserialize, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct OpenStateConfig {
     pub id: u32,
     pub default_state: bool,

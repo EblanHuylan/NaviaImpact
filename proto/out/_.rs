@@ -531,16 +531,16 @@ pub struct Adabgfhgaab {
     #[prost(uint32, tag = "9")]
     pub knkkihiohco: u32,
     #[prost(
-        oneof = "adabgfhgaab::Bmekiblncma",
+        oneof = "adabgfhgaab::Detail",
         tags = "382, 1300, 482, 28, 1062, 1302, 1440, 1894, 818, 917, 1674, 1822, 1808, 284, 800, 908, 1921, 1080, 210, 1560, 39, 1243, 1191, 1206, 1108, 418"
     )]
-    pub bmekiblncma: ::core::option::Option<adabgfhgaab::Bmekiblncma>,
+    pub detail: ::core::option::Option<adabgfhgaab::Detail>,
 }
 /// Nested message and enum types in `ADABGFHGAAB`.
 pub mod adabgfhgaab {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "382")]
         TowerLevelEndNotify(super::Pnmjpacnpno),
         #[prost(message, tag = "1300")]
@@ -622,17 +622,14 @@ pub struct Podmpgemfdm {
     pub retcode: i32,
     #[prost(uint32, tag = "7")]
     pub avatar_id: u32,
-    #[prost(
-        oneof = "podmpgemfdm::Bmekiblncma",
-        tags = "1054, 1444, 807, 849, 326, 827, 740"
-    )]
-    pub bmekiblncma: ::core::option::Option<podmpgemfdm::Bmekiblncma>,
+    #[prost(oneof = "podmpgemfdm::Detail", tags = "1054, 1444, 807, 849, 326, 827, 740")]
+    pub detail: ::core::option::Option<podmpgemfdm::Detail>,
 }
 /// Nested message and enum types in `PODMPGEMFDM`.
 pub mod podmpgemfdm {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "1054")]
         SkillResponse(super::Ilfgjbabkom),
         #[prost(message, tag = "1444")]
@@ -668,7 +665,7 @@ pub struct Kldjkoikigd {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Cieigoagpcp {
+pub struct SceneReliquaryInfo {
     #[prost(uint64, tag = "2")]
     pub guid: u64,
     #[prost(uint32, tag = "4")]
@@ -751,9 +748,9 @@ pub struct Eiknjolfcje {
 /// CmdId: 9831
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Pnfmokmnjgm {
+pub struct WearEquipRsp {
     #[prost(uint64, tag = "8")]
-    pub pcgbopnclbd: u64,
+    pub equip_guid: u64,
     #[prost(uint64, tag = "7")]
     pub avatar_guid: u64,
     #[prost(int32, tag = "10")]
@@ -1237,11 +1234,11 @@ pub struct Ifacpidpkah {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Gbdgpegjaho {
+pub struct Material {
     #[prost(message, optional, tag = "2")]
-    pub ejoobgddoli: ::core::option::Option<Jkakaomdnkk>,
+    pub delete_info: ::core::option::Option<MaterialDeleteInfo>,
     #[prost(uint32, tag = "1")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 /// CmdId: 29422
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1766,7 +1763,7 @@ pub struct Kkmamecofcb {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Bdofloihgbe {
     #[prost(message, repeated, tag = "2")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "1")]
     pub oejhpkikleh: u32,
 }
@@ -1967,14 +1964,14 @@ pub struct Oojabholigi {
     pub beffnjjidil: u32,
     #[prost(enumeration = "Cpndeiaplgd", tag = "9")]
     pub keicfnilgnl: i32,
-    #[prost(oneof = "oojabholigi::Bmekiblncma", tags = "346, 647, 1749")]
-    pub bmekiblncma: ::core::option::Option<oojabholigi::Bmekiblncma>,
+    #[prost(oneof = "oojabholigi::Detail", tags = "346, 647, 1749")]
+    pub detail: ::core::option::Option<oojabholigi::Detail>,
 }
 /// Nested message and enum types in `OOJABHOLIGI`.
 pub mod oojabholigi {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "346")]
         PveActivitySettle(super::Njnjohdofpg),
         #[prost(message, tag = "647")]
@@ -2561,7 +2558,7 @@ pub struct Ibnjejipald {
     #[prost(uint32, tag = "9")]
     pub eigajccgfkd: u32,
     #[prost(uint32, tag = "14")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2971,14 +2968,14 @@ pub struct Eopkclgiddb {
     pub group_id: u32,
     #[prost(uint32, tag = "13")]
     pub nphfhendkoo: u32,
-    #[prost(oneof = "eopkclgiddb::Bmekiblncma", tags = "81, 16, 1945")]
-    pub bmekiblncma: ::core::option::Option<eopkclgiddb::Bmekiblncma>,
+    #[prost(oneof = "eopkclgiddb::Detail", tags = "81, 16, 1945")]
+    pub detail: ::core::option::Option<eopkclgiddb::Detail>,
 }
 /// Nested message and enum types in `EOPKCLGIDDB`.
 pub mod eopkclgiddb {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "81")]
         MechanicusSettleInfo(super::Jplnclhofjl),
         #[prost(message, tag = "16")]
@@ -3100,7 +3097,7 @@ pub struct Cjfmbmdaffg {
     #[prost(uint32, tag = "10")]
     pub hfdeihheaff: u32,
     #[prost(uint64, tag = "4")]
-    pub obmbiphonfb: u64,
+    pub exp: u64,
     #[prost(bool, tag = "15")]
     pub bdoelfhchmn: bool,
     #[prost(uint32, tag = "9")]
@@ -3188,25 +3185,25 @@ pub struct Jijbfpboinf {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Nkcgpmdjbdb {
+pub struct Item {
     #[prost(uint32, tag = "1")]
     pub item_id: u32,
     #[prost(uint64, tag = "2")]
     pub guid: u64,
-    #[prost(oneof = "nkcgpmdjbdb::Bmekiblncma", tags = "5, 6, 7")]
-    pub bmekiblncma: ::core::option::Option<nkcgpmdjbdb::Bmekiblncma>,
+    #[prost(oneof = "item::Detail", tags = "5, 6, 7")]
+    pub detail: ::core::option::Option<item::Detail>,
 }
-/// Nested message and enum types in `NKCGPMDJBDB`.
-pub mod nkcgpmdjbdb {
+/// Nested message and enum types in `Item`.
+pub mod item {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "5")]
-        Material(super::Gbdgpegjaho),
+        Material(super::Material),
         #[prost(message, tag = "6")]
-        Equip(super::Gmgfpbckiep),
+        Equip(super::Equip),
         #[prost(message, tag = "7")]
-        Furniture(super::Ojcnmpeamld),
+        Furniture(super::Furniture),
     }
 }
 /// CmdId: 5070
@@ -3215,14 +3212,14 @@ pub mod nkcgpmdjbdb {
 pub struct Mncjbfcmeon {
     #[prost(uint32, tag = "3")]
     pub bneldfgkool: u32,
-    #[prost(oneof = "mncjbfcmeon::Bmekiblncma", tags = "2, 15")]
-    pub bmekiblncma: ::core::option::Option<mncjbfcmeon::Bmekiblncma>,
+    #[prost(oneof = "mncjbfcmeon::Detail", tags = "2, 15")]
+    pub detail: ::core::option::Option<mncjbfcmeon::Detail>,
 }
 /// Nested message and enum types in `MNCJBFCMEON`.
 pub mod mncjbfcmeon {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "2")]
         GallerySettleInfo(super::Ofenbankpog),
         #[prost(message, tag = "15")]
@@ -3306,13 +3303,13 @@ pub struct Gnchijicpce {
 /// CmdId: 20155
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Bhodmoolego {
+pub struct PlayerStoreNotify {
     #[prost(message, repeated, tag = "2")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Nkcgpmdjbdb>,
-    #[prost(enumeration = "Pofibapbilh", tag = "3")]
-    pub lpafepagnol: i32,
+    pub item_list: ::prost::alloc::vec::Vec<Item>,
+    #[prost(enumeration = "StoreType", tag = "3")]
+    pub store_type: i32,
     #[prost(uint32, tag = "7")]
-    pub afgoojdngcn: u32,
+    pub weight_limit: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3720,7 +3717,7 @@ pub struct Gkinegecahj {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Nhkdhmodfof {
     #[prost(message, repeated, tag = "14")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "11")]
     pub bekohdlnhpe: u32,
     #[prost(uint32, tag = "3")]
@@ -4385,7 +4382,7 @@ pub struct Hfpnjnpfefg {
     #[prost(uint32, tag = "8")]
     pub jhcfofmdbck: u32,
     #[prost(uint32, tag = "6")]
-    pub obmbiphonfb: u32,
+    pub exp: u32,
     #[prost(uint32, tag = "14")]
     pub mijmkegekld: u32,
     #[prost(uint32, tag = "3")]
@@ -4652,7 +4649,7 @@ pub struct Amanhccgajj {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Ajhakligpke {
     #[prost(message, repeated, tag = "7")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Hpaebjhdclp>,
+    pub item_list: ::prost::alloc::vec::Vec<Hpaebjhdclp>,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -5176,7 +5173,7 @@ pub struct Pannlhiabkm {
     #[prost(message, optional, tag = "4")]
     pub migifpdcihi: ::core::option::Option<Bnadjknbdom>,
     #[prost(message, repeated, tag = "7")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Pdkmfeblehe>,
+    pub item_list: ::prost::alloc::vec::Vec<Pdkmfeblehe>,
     #[prost(bool, tag = "11")]
     pub njnipohgdgc: bool,
     #[prost(bool, tag = "12")]
@@ -5199,7 +5196,7 @@ pub struct Pannlhiabkm {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Jjlbcbemfcp {
     #[prost(message, repeated, tag = "6")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "12")]
     pub ejdklhkhgil: u32,
 }
@@ -5865,9 +5862,9 @@ pub struct Poafagcippa {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Ojcnmpeamld {
+pub struct Furniture {
     #[prost(uint32, tag = "1")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 /// CmdId: 24748
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -6122,14 +6119,14 @@ pub struct Jbhhgohkmgb {
 pub struct Ldlloffmiec {
     #[prost(uint32, tag = "3")]
     pub group_id: u32,
-    #[prost(oneof = "ldlloffmiec::Bmekiblncma", tags = "602, 1982, 1635, 122, 1545")]
-    pub bmekiblncma: ::core::option::Option<ldlloffmiec::Bmekiblncma>,
+    #[prost(oneof = "ldlloffmiec::Detail", tags = "602, 1982, 1635, 122, 1545")]
+    pub detail: ::core::option::Option<ldlloffmiec::Detail>,
 }
 /// Nested message and enum types in `LDLLOFFMIEC`.
 pub mod ldlloffmiec {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "602")]
         RacingGalleryInfo(super::Imnjcijlmbb),
         #[prost(message, tag = "1982")]
@@ -6676,7 +6673,7 @@ pub struct Jfjkgbmkmkc {
     #[prost(uint32, repeated, tag = "6")]
     pub hoimfanhelj: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "7")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "11")]
     pub kljigdaoken: u32,
     #[prost(bool, tag = "12")]
@@ -7408,7 +7405,7 @@ pub struct Ooemagbgoal {
     #[prost(uint32, repeated, tag = "8")]
     pub gdckdkcadhg: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "2")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(int32, tag = "11")]
     pub retcode: i32,
     #[prost(uint32, tag = "5")]
@@ -8917,7 +8914,7 @@ pub struct Cgnajmojcil {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Khfmmihlobk {
     #[prost(message, repeated, tag = "1")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(int32, repeated, tag = "9")]
     pub ilhikgggfaf: ::prost::alloc::vec::Vec<i32>,
     #[prost(int32, tag = "12")]
@@ -9470,17 +9467,17 @@ pub struct Gkgkncgbacp {
 /// CmdId: 9280
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Acmedlbbmlj {
+pub struct AvatarEquipChangeNotify {
     #[prost(message, optional, tag = "14")]
-    pub pfkggggnloj: ::core::option::Option<Cieigoagpcp>,
+    pub reliquary: ::core::option::Option<SceneReliquaryInfo>,
     #[prost(message, optional, tag = "13")]
     pub weapon: ::core::option::Option<SceneWeaponInfo>,
     #[prost(uint64, tag = "15")]
-    pub pcgbopnclbd: u64,
+    pub equip_guid: u64,
     #[prost(uint64, tag = "2")]
     pub avatar_guid: u64,
     #[prost(uint32, tag = "11")]
-    pub lgfmollpfln: u32,
+    pub equip_type: u32,
     #[prost(uint32, tag = "4")]
     pub item_id: u32,
 }
@@ -9614,7 +9611,7 @@ pub struct Pbmjmnbiieg {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Njpjdajimeo {
     #[prost(message, repeated, tag = "1")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "8")]
     pub bplmbenlmmi: u32,
     #[prost(uint32, tag = "6")]
@@ -9643,15 +9640,15 @@ pub struct Ihhjkpjdfdk {}
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Fmglbjjphpb {
     /// int32 retcode = 0;
-    #[prost(oneof = "fmglbjjphpb::Bmekiblncma", tags = "4, 5")]
-    pub bmekiblncma: ::core::option::Option<fmglbjjphpb::Bmekiblncma>,
+    #[prost(oneof = "fmglbjjphpb::Detail", tags = "4, 5")]
+    pub detail: ::core::option::Option<fmglbjjphpb::Detail>,
 }
 /// Nested message and enum types in `FMGLBJJPHPB`.
 pub mod fmglbjjphpb {
     /// int32 retcode = 0;
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "4")]
         ForceUdpate(super::Bomnmplakep),
         #[prost(message, tag = "5")]
@@ -9899,7 +9896,7 @@ pub struct Cjpkmhnbijb {
     #[prost(uint32, repeated, tag = "9")]
     pub kjnhdaepgag: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "2")]
-    pub lgfmollpfln: u32,
+    pub equip_type: u32,
 }
 /// CmdId: 4510
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -10499,14 +10496,14 @@ pub struct Kleifgkmlln {
     pub kkkllingmhj: bool,
     #[prost(uint32, tag = "11")]
     pub ofkgcpphcga: u32,
-    #[prost(oneof = "kleifgkmlln::Bmekiblncma", tags = "6, 9, 4")]
-    pub bmekiblncma: ::core::option::Option<kleifgkmlln::Bmekiblncma>,
+    #[prost(oneof = "kleifgkmlln::Detail", tags = "6, 9, 4")]
+    pub detail: ::core::option::Option<kleifgkmlln::Detail>,
 }
 /// Nested message and enum types in `KLEIFGKMLLN`.
 pub mod kleifgkmlln {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "6")]
         BalloonInfo(super::Okpkjfkmmaf),
         #[prost(message, tag = "9")]
@@ -10781,14 +10778,14 @@ pub struct Lpffbmdpiaf {
     pub jlhfofokflo: bool,
     #[prost(uint32, tag = "9")]
     pub level: u32,
-    #[prost(oneof = "lpffbmdpiaf::Bmekiblncma", tags = "930")]
-    pub bmekiblncma: ::core::option::Option<lpffbmdpiaf::Bmekiblncma>,
+    #[prost(oneof = "lpffbmdpiaf::Detail", tags = "930")]
+    pub detail: ::core::option::Option<lpffbmdpiaf::Detail>,
 }
 /// Nested message and enum types in `LPFFBMDPIAF`.
 pub mod lpffbmdpiaf {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "930")]
         OfferingPariDetailData(super::Pjofidolkcf),
     }
@@ -11314,14 +11311,14 @@ pub struct Ddcfojmimcb {
     pub klmfipdbpdn: u32,
     #[prost(uint32, tag = "12")]
     pub ehbpgjpfjlf: u32,
-    #[prost(oneof = "ddcfojmimcb::Bmekiblncma", tags = "279")]
-    pub bmekiblncma: ::core::option::Option<ddcfojmimcb::Bmekiblncma>,
+    #[prost(oneof = "ddcfojmimcb::Detail", tags = "279")]
+    pub detail: ::core::option::Option<ddcfojmimcb::Detail>,
 }
 /// Nested message and enum types in `DDCFOJMIMCB`.
 pub mod ddcfojmimcb {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "279")]
         UgcTeamInfo(super::Eijlghafjoc),
     }
@@ -11346,7 +11343,7 @@ pub struct Kakehjmiglh {
     #[prost(uint32, repeated, tag = "7")]
     pub gchcddhahic: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "4")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "13")]
     pub indkccgipol: u32,
     #[prost(uint32, tag = "1")]
@@ -11639,17 +11636,17 @@ pub struct Pkimhdglcfk {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Jkakaomdnkk {
+pub struct MaterialDeleteInfo {
     #[prost(bool, tag = "1")]
-    pub onmfplfomad: bool,
-    #[prost(oneof = "jkakaomdnkk::Ejoobgddoli", tags = "2, 3, 4")]
-    pub ejoobgddoli: ::core::option::Option<jkakaomdnkk::Ejoobgddoli>,
+    pub has_delete_config: bool,
+    #[prost(oneof = "material_delete_info::DeleteInfo", tags = "2, 3, 4")]
+    pub delete_info: ::core::option::Option<material_delete_info::DeleteInfo>,
 }
-/// Nested message and enum types in `JKAKAOMDNKK`.
-pub mod jkakaomdnkk {
+/// Nested message and enum types in `MaterialDeleteInfo`.
+pub mod material_delete_info {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Ejoobgddoli {
+    pub enum DeleteInfo {
         #[prost(message, tag = "2")]
         CountDownDelete(super::Dhcdiijghhg),
         #[prost(message, tag = "3")]
@@ -11705,7 +11702,7 @@ pub struct Hfdlkoaldji {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Obnpnjhohii {
     #[prost(message, repeated, tag = "7")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, repeated, tag = "5")]
     pub hnfoonikoea: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "8")]
@@ -12083,7 +12080,7 @@ pub struct Nopjnenjejb {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Jplkdnjgpll {
     #[prost(message, repeated, tag = "6")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "12")]
     pub ggcnnjmmlcn: u32,
     #[prost(int32, tag = "8")]
@@ -12285,7 +12282,7 @@ pub struct Dohkhbpkgjb {
     #[prost(uint32, repeated, tag = "11")]
     pub dpfomloekob: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "8")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(int32, tag = "2")]
     pub retcode: i32,
 }
@@ -12501,7 +12498,7 @@ pub struct Jigciopjndj {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Lmapkmcmldf {
     #[prost(message, repeated, tag = "14")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, repeated, tag = "3")]
     pub dpfomloekob: ::prost::alloc::vec::Vec<u32>,
     #[prost(int32, tag = "2")]
@@ -12943,7 +12940,7 @@ pub struct Goalpmmjfjj {
     #[prost(uint32, tag = "8")]
     pub monster_id: u32,
     #[prost(uint32, tag = "2")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "11")]
     pub level: u32,
 }
@@ -13367,7 +13364,7 @@ pub struct Pohggolieok {
     #[prost(uint64, repeated, tag = "14")]
     pub equip_guid_list: ::prost::alloc::vec::Vec<u64>,
     #[prost(bool, tag = "12")]
-    pub fodhincigpa: bool,
+    pub is_locked: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -13418,7 +13415,7 @@ pub struct Ljoekhilind {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Nnfnijagfpe {
     #[prost(uint32, tag = "2")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "1")]
     pub kcilpgfncga: u32,
 }
@@ -13440,14 +13437,14 @@ pub mod ibjeinkklnn {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Kobfhhkphno {
-        #[prost(oneof = "kobfhhkphno::Bmekiblncma", tags = "5, 13")]
-        pub bmekiblncma: ::core::option::Option<kobfhhkphno::Bmekiblncma>,
+        #[prost(oneof = "kobfhhkphno::Detail", tags = "5, 13")]
+        pub detail: ::core::option::Option<kobfhhkphno::Detail>,
     }
     /// Nested message and enum types in `KOBFHHKPHNO`.
     pub mod kobfhhkphno {
         #[allow(clippy::derive_partial_eq_without_eq)]
         #[derive(Clone, PartialEq, ::prost::Oneof)]
-        pub enum Bmekiblncma {
+        pub enum Detail {
             #[prost(uint32, tag = "5")]
             MistTrialAvatarId(u32),
             #[prost(uint64, tag = "13")]
@@ -14050,9 +14047,9 @@ pub struct Nipgofnijck {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Pgbpeelljcm {
     #[prost(message, repeated, tag = "1")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Nkcgpmdjbdb>,
-    #[prost(enumeration = "Pofibapbilh", tag = "12")]
-    pub lpafepagnol: i32,
+    pub item_list: ::prost::alloc::vec::Vec<Item>,
+    #[prost(enumeration = "StoreType", tag = "12")]
+    pub store_type: i32,
 }
 /// CmdId: 6632
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -14167,14 +14164,14 @@ pub struct Iaekgkpjiip {
     pub mljpgiolphf: i32,
     #[prost(int32, tag = "13")]
     pub retcode: i32,
-    #[prost(oneof = "iaekgkpjiip::Bmekiblncma", tags = "2, 8")]
-    pub bmekiblncma: ::core::option::Option<iaekgkpjiip::Bmekiblncma>,
+    #[prost(oneof = "iaekgkpjiip::Detail", tags = "2, 8")]
+    pub detail: ::core::option::Option<iaekgkpjiip::Detail>,
 }
 /// Nested message and enum types in `IAEKGKPJIIP`.
 pub mod iaekgkpjiip {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "2")]
         TemplatePotionInfo(super::Jliejbempjc),
         #[prost(uint32, tag = "8")]
@@ -14443,7 +14440,7 @@ pub struct Gdjlgibbiih {
     #[prost(message, optional, tag = "4")]
     pub position: ::core::option::Option<Vector>,
     #[prost(message, repeated, tag = "9")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Bnfbjeajcko>,
+    pub item_list: ::prost::alloc::vec::Vec<Bnfbjeajcko>,
     #[prost(message, repeated, tag = "6")]
     pub eniaoadffpi: ::prost::alloc::vec::Vec<Bnfbjeajcko>,
     #[prost(uint32, tag = "5")]
@@ -15568,7 +15565,7 @@ pub struct Kfgilomegnp {
     #[prost(uint32, tag = "14")]
     pub level: u32,
     #[prost(uint32, tag = "7")]
-    pub obmbiphonfb: u32,
+    pub exp: u32,
     #[prost(uint32, tag = "9")]
     pub bnombdgdkcc: u32,
 }
@@ -17008,7 +17005,7 @@ pub struct Mpigbljnodk {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Cgebladheco {
     #[prost(message, repeated, tag = "13")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "12")]
     pub ogkjhlipjgh: u32,
     #[prost(uint32, tag = "4")]
@@ -17382,14 +17379,14 @@ pub struct Gikfnmjphdm {
     pub dlmjdlfddle: u32,
     #[prost(uint32, tag = "12")]
     pub jhoeligiehj: u32,
-    #[prost(oneof = "gikfnmjphdm::Bmekiblncma", tags = "1389, 1637, 319, 823")]
-    pub bmekiblncma: ::core::option::Option<gikfnmjphdm::Bmekiblncma>,
+    #[prost(oneof = "gikfnmjphdm::Detail", tags = "1389, 1637, 319, 823")]
+    pub detail: ::core::option::Option<gikfnmjphdm::Detail>,
 }
 /// Nested message and enum types in `GIKFNMJPHDM`.
 pub mod gikfnmjphdm {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "1389")]
         ChannellerSlabLoopDungeonResultInfo(super::Jaeimfidmen),
         #[prost(message, tag = "1637")]
@@ -17558,7 +17555,7 @@ pub struct Ghnggdcgend {
     #[prost(uint64, tag = "4")]
     pub pomcgjdmbaf: u64,
     #[prost(uint32, tag = "9")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(bool, tag = "12")]
     pub bfekdlnedng: bool,
     #[prost(uint32, tag = "8")]
@@ -17782,14 +17779,14 @@ pub struct Gbaoaddanee {
     pub dlcinighabm: u32,
     #[prost(enumeration = "Nffjcnoedkc", tag = "5")]
     pub afenlmaaijl: i32,
-    #[prost(oneof = "gbaoaddanee::Bmekiblncma", tags = "1292, 1116")]
-    pub bmekiblncma: ::core::option::Option<gbaoaddanee::Bmekiblncma>,
+    #[prost(oneof = "gbaoaddanee::Detail", tags = "1292, 1116")]
+    pub detail: ::core::option::Option<gbaoaddanee::Detail>,
 }
 /// Nested message and enum types in `GBAOADDANEE`.
 pub mod gbaoaddanee {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "1292")]
         CookGameInfo(super::Mgbgenhlljk),
         #[prost(message, tag = "1116")]
@@ -18461,7 +18458,7 @@ pub struct Imedhhdkmll {
     #[prost(message, optional, tag = "8")]
     pub anafbddaked: ::core::option::Option<Lckccmadkpj>,
     #[prost(uint32, tag = "5")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 /// CmdId: 23200
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -18672,7 +18669,7 @@ pub struct Bnfbjeajcko {
     #[prost(uint64, tag = "7")]
     pub guid: u64,
     #[prost(uint32, tag = "10")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 /// CmdId: 25556
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -18802,7 +18799,7 @@ pub struct Icglgjheamb {
     #[prost(uint32, repeated, tag = "8")]
     pub bgcijlejdfi: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "11")]
-    pub obmbiphonfb: u32,
+    pub exp: u32,
     #[prost(uint32, tag = "10")]
     pub level: u32,
 }
@@ -18847,9 +18844,9 @@ pub struct Lbkaloildee {
     #[prost(message, optional, tag = "2")]
     pub pos: ::core::option::Option<Vector>,
     #[prost(uint32, tag = "10")]
-    pub mlbpdlalfmp: u32,
-    #[prost(enumeration = "Pofibapbilh", tag = "3")]
-    pub lpafepagnol: i32,
+    pub count: u32,
+    #[prost(enumeration = "StoreType", tag = "3")]
+    pub store_type: i32,
     #[prost(uint64, tag = "13")]
     pub guid: u64,
 }
@@ -19896,8 +19893,8 @@ pub struct Pkljbklpnhj {
 pub struct Jckfemkaoip {
     #[prost(uint64, repeated, tag = "12")]
     pub eknodfmiijb: ::prost::alloc::vec::Vec<u64>,
-    #[prost(enumeration = "Pofibapbilh", tag = "8")]
-    pub lpafepagnol: i32,
+    #[prost(enumeration = "StoreType", tag = "8")]
+    pub store_type: i32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -20481,7 +20478,7 @@ pub struct Nogdcodfamd {
     #[prost(uint32, repeated, tag = "13")]
     pub kkgklgffmpi: ::prost::alloc::vec::Vec<u32>,
     #[prost(bool, tag = "14")]
-    pub fodhincigpa: bool,
+    pub is_locked: bool,
     #[prost(uint32, tag = "9")]
     pub scene_id: u32,
 }
@@ -20969,14 +20966,14 @@ pub struct Bachpojnpkd {
     pub r#type: i32,
     #[prost(uint32, tag = "7")]
     pub dfpgglhgfpn: u32,
-    #[prost(oneof = "bachpojnpkd::Bmekiblncma", tags = "1241, 112, 765")]
-    pub bmekiblncma: ::core::option::Option<bachpojnpkd::Bmekiblncma>,
+    #[prost(oneof = "bachpojnpkd::Detail", tags = "1241, 112, 765")]
+    pub detail: ::core::option::Option<bachpojnpkd::Detail>,
 }
 /// Nested message and enum types in `BACHPOJNPKD`.
 pub mod bachpojnpkd {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "1241")]
         Normal(super::Ongklgjbpkd),
         #[prost(message, tag = "112")]
@@ -21065,7 +21062,7 @@ pub struct Eiekkfapfld {
     #[prost(uint64, tag = "15")]
     pub eebblemeofh: u64,
     #[prost(bool, tag = "6")]
-    pub fodhincigpa: bool,
+    pub is_locked: bool,
     #[prost(int32, tag = "14")]
     pub retcode: i32,
 }
@@ -22669,17 +22666,14 @@ pub struct Kocblcdplop {
     pub avatar_id: u32,
     #[prost(uint32, tag = "10")]
     pub r#type: u32,
-    #[prost(
-        oneof = "kocblcdplop::Bmekiblncma",
-        tags = "1813, 607, 1737, 707, 994, 1465, 77"
-    )]
-    pub bmekiblncma: ::core::option::Option<kocblcdplop::Bmekiblncma>,
+    #[prost(oneof = "kocblcdplop::Detail", tags = "1813, 607, 1737, 707, 994, 1465, 77")]
+    pub detail: ::core::option::Option<kocblcdplop::Detail>,
 }
 /// Nested message and enum types in `KOCBLCDPLOP`.
 pub mod kocblcdplop {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "1813")]
         SkillRequest(super::Mefinpnfnin),
         #[prost(message, tag = "607")]
@@ -23676,18 +23670,18 @@ pub struct Hheiljjpebh {
 pub struct Nkgenpdoeda {
     #[prost(uint32, tag = "1")]
     pub item_id: u32,
-    #[prost(oneof = "nkgenpdoeda::Bmekiblncma", tags = "2, 3")]
-    pub bmekiblncma: ::core::option::Option<nkgenpdoeda::Bmekiblncma>,
+    #[prost(oneof = "nkgenpdoeda::Detail", tags = "2, 3")]
+    pub detail: ::core::option::Option<nkgenpdoeda::Detail>,
 }
 /// Nested message and enum types in `NKGENPDOEDA`.
 pub mod nkgenpdoeda {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "2")]
-        Reliquary(super::Eghadjdohke),
+        Reliquary(super::Reliquary),
         #[prost(message, tag = "3")]
-        Weapon(super::Noipiellgno),
+        Weapon(super::Weapon),
     }
 }
 /// CmdId: 22755
@@ -24992,7 +24986,7 @@ pub struct Onkblalabcn {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Pacnmmlolpf {
     #[prost(message, repeated, tag = "6")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "2")]
     pub uid: u32,
 }
@@ -25031,7 +25025,7 @@ pub struct Nolkkoclobi {
     #[prost(message, optional, tag = "15")]
     pub anafbddaked: ::core::option::Option<Lckccmadkpj>,
     #[prost(uint32, tag = "12")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 /// CmdId: 26636
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -25603,7 +25597,7 @@ pub struct Cfaillkpiao {
     #[prost(bool, tag = "9")]
     pub plnnmnnlepj: bool,
     #[prost(uint32, tag = "11")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "2")]
     pub eigajccgfkd: u32,
 }
@@ -25951,7 +25945,7 @@ pub struct Alpkpcfckkd {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Doadbgpfhdo {
     #[prost(message, repeated, tag = "14")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(string, tag = "12")]
     pub cgmndbakdfp: ::prost::alloc::string::String,
     #[prost(uint32, tag = "6")]
@@ -26021,7 +26015,7 @@ pub struct Nbjbfklofmf {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Caedfpaijai {
     #[prost(message, repeated, tag = "15")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, repeated, tag = "6")]
     pub maefajdbflc: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "3")]
@@ -27453,7 +27447,7 @@ pub struct Kljjhgeegdk {
     #[prost(uint32, tag = "9")]
     pub ncjlgfjocml: u32,
     #[prost(uint32, tag = "13")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 /// CmdId: 24027
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -27667,7 +27661,7 @@ pub struct Aeoniojdooc {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Hhaklicaafp {
     #[prost(message, optional, tag = "1")]
-    pub kapopjlgjon: ::core::option::Option<Nkcgpmdjbdb>,
+    pub kapopjlgjon: ::core::option::Option<Item>,
     #[prost(uint32, tag = "2")]
     pub bghnkkaadjc: u32,
 }
@@ -27787,7 +27781,7 @@ pub struct Jnkmjdainni {
     #[prost(message, repeated, tag = "2")]
     pub ocbicmnfndm: ::prost::alloc::vec::Vec<Gldmfoifafh>,
     #[prost(uint32, tag = "3")]
-    pub lgfmollpfln: u32,
+    pub equip_type: u32,
 }
 /// CmdId: 1391
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -27814,7 +27808,7 @@ pub struct Cbcngnddkna {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Onnekcjaejp {
     #[prost(message, repeated, tag = "14")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(int32, tag = "9")]
     pub retcode: i32,
 }
@@ -28772,7 +28766,7 @@ pub struct Ijhiecjohem {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dfdipgagjcm {
     #[prost(message, repeated, tag = "6")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "2")]
     pub quest_id: u32,
 }
@@ -30401,7 +30395,7 @@ pub struct Bdfebhhgbmc {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dhjhcaehfai {
     #[prost(bool, tag = "7")]
-    pub fodhincigpa: bool,
+    pub is_locked: bool,
     #[prost(uint32, tag = "12")]
     pub anbohdobmml: u32,
 }
@@ -30473,16 +30467,16 @@ pub struct Cclgeohjlpb {
     #[prost(uint32, tag = "5")]
     pub ejdklhkhgil: u32,
     #[prost(
-        oneof = "cclgeohjlpb::Bmekiblncma",
+        oneof = "cclgeohjlpb::Detail",
         tags = "3, 8, 13, 1, 994, 1131, 1885, 603, 1458, 144, 365, 1855, 1709, 1706, 856, 521, 211, 1154, 620, 966, 21, 198, 1697, 1612, 91, 1928, 1841, 1052, 1443, 1418, 1532, 920, 832, 1911, 720, 1795, 1459, 830, 428, 781, 32, 279, 1693, 2014, 836, 1281, 1124, 1925, 1135, 1932, 860, 1781, 1593, 1921, 1051, 150, 998, 240, 1701, 62, 1502, 1178, 1206, 407, 1582, 70, 484, 400, 46, 1183, 1538, 265, 2030, 274, 1129, 1218, 815, 232, 251, 916, 1548, 1765, 1035, 640, 807, 29, 524, 1662, 423, 255, 798, 1054, 765, 890, 436, 1782, 1202, 1818, 1138, 1071, 1192, 450, 188"
     )]
-    pub bmekiblncma: ::core::option::Option<cclgeohjlpb::Bmekiblncma>,
+    pub detail: ::core::option::Option<cclgeohjlpb::Detail>,
 }
 /// Nested message and enum types in `CCLGEOHJLPB`.
 pub mod cclgeohjlpb {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "3")]
         SamLampInfo(super::Pnoaejijldh),
         #[prost(message, tag = "8")]
@@ -30700,7 +30694,7 @@ pub struct Fcaciaimcbm {
     #[prost(uint32, tag = "8")]
     pub item_id: u32,
     #[prost(uint32, tag = "10")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 /// CmdId: 24478
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -31473,7 +31467,7 @@ pub struct Gjdbjjodmle {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Jaclbgniman {
     #[prost(uint32, tag = "2")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "1")]
     pub item_id: u32,
 }
@@ -31666,7 +31660,7 @@ pub struct Ndiaclcdfnh {}
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Obopfhicijf {
     #[prost(message, repeated, tag = "13")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(message, repeated, tag = "10")]
     pub oljbbjolmif: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(message, optional, tag = "4")]
@@ -31717,7 +31711,7 @@ pub struct Donaemoebjg {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Ecapgjcpedh {
     #[prost(uint32, tag = "2")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "1")]
     pub offnmaoffei: u32,
 }
@@ -33273,7 +33267,7 @@ pub struct Legnnnncopl {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Loolalldeam {
     #[prost(message, repeated, tag = "9")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Nkcgpmdjbdb>,
+    pub item_list: ::prost::alloc::vec::Vec<Item>,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -34150,7 +34144,7 @@ pub struct Pdkmfeblehe {
     #[prost(message, optional, tag = "1")]
     pub dhiboppkhpi: ::core::option::Option<Aegnnmpigic>,
     #[prost(message, optional, tag = "2")]
-    pub ejoobgddoli: ::core::option::Option<Jkakaomdnkk>,
+    pub delete_info: ::core::option::Option<MaterialDeleteInfo>,
 }
 /// CmdId: 7722
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -34765,7 +34759,7 @@ pub struct Dbofpakbjnd {
     #[prost(uint32, repeated, tag = "12")]
     pub onhnfmdbepj: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "1")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 /// CmdId: 27700
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -34915,7 +34909,7 @@ pub struct Mkpembdldmj {
     #[prost(uint64, tag = "3")]
     pub guid: u64,
     #[prost(uint32, tag = "10")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -35006,7 +35000,7 @@ pub struct Aeladcpcjlc {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dfpcjlpdnnk {
     #[prost(uint32, tag = "9")]
-    pub lgfmollpfln: u32,
+    pub equip_type: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -35045,21 +35039,21 @@ pub struct Ebglfogadgo {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Gmgfpbckiep {
+pub struct Equip {
     #[prost(bool, tag = "3")]
-    pub fodhincigpa: bool,
-    #[prost(oneof = "gmgfpbckiep::Bmekiblncma", tags = "1, 2")]
-    pub bmekiblncma: ::core::option::Option<gmgfpbckiep::Bmekiblncma>,
+    pub is_locked: bool,
+    #[prost(oneof = "equip::Detail", tags = "1, 2")]
+    pub detail: ::core::option::Option<equip::Detail>,
 }
-/// Nested message and enum types in `GMGFPBCKIEP`.
-pub mod gmgfpbckiep {
+/// Nested message and enum types in `Equip`.
+pub mod equip {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "1")]
-        Reliquary(super::Eghadjdohke),
+        Reliquary(super::Reliquary),
         #[prost(message, tag = "2")]
-        Weapon(super::Noipiellgno),
+        Weapon(super::Weapon),
     }
 }
 /// CmdId: 24565
@@ -35102,7 +35096,7 @@ pub struct Pomlljmdbic {
     #[prost(uint32, tag = "10")]
     pub poobobleobc: u32,
     #[prost(bool, tag = "4")]
-    pub fodhincigpa: bool,
+    pub is_locked: bool,
 }
 /// CmdId: 8373
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -35536,7 +35530,7 @@ pub struct Bchkbdbgllg {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Eplkhdcggmb {
     #[prost(bool, tag = "10")]
-    pub fodhincigpa: bool,
+    pub is_locked: bool,
     #[prost(int32, tag = "13")]
     pub retcode: i32,
 }
@@ -35588,7 +35582,7 @@ pub struct Clfmmgkkbam {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Ljgpmcgjoog {
     #[prost(message, repeated, tag = "15")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(uint32, tag = "4")]
     pub bekohdlnhpe: u32,
     #[prost(int32, tag = "6")]
@@ -35651,7 +35645,7 @@ pub struct Dikfgjhfkdl {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Pmboeggedjp {
     #[prost(message, repeated, tag = "4")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(message, optional, tag = "13")]
     pub figbhdjbada: ::core::option::Option<Kbaimacepcl>,
     #[prost(string, tag = "10")]
@@ -35720,14 +35714,14 @@ pub struct Ihbgflelppg {
 pub struct Hogidhcepfm {
     #[prost(uint32, repeated, tag = "2")]
     pub hemdgdbjljc: ::prost::alloc::vec::Vec<u32>,
-    #[prost(oneof = "hogidhcepfm::Bmekiblncma", tags = "15, 9")]
-    pub bmekiblncma: ::core::option::Option<hogidhcepfm::Bmekiblncma>,
+    #[prost(oneof = "hogidhcepfm::Detail", tags = "15, 9")]
+    pub detail: ::core::option::Option<hogidhcepfm::Detail>,
 }
 /// Nested message and enum types in `HOGIDHCEPFM`.
 pub mod hogidhcepfm {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "15")]
         OrderInfo(super::Lhfciomammj),
         #[prost(message, tag = "9")]
@@ -35793,7 +35787,7 @@ pub struct Dhbadkibkbh {
     #[prost(uint64, tag = "2")]
     pub eebblemeofh: u64,
     #[prost(bool, tag = "3")]
-    pub fodhincigpa: bool,
+    pub is_locked: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -35806,9 +35800,9 @@ pub struct Hfhfndalgdb {
 /// CmdId: 21829
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Enaefldllhl {
+pub struct WearEquipReq {
     #[prost(uint64, tag = "2")]
-    pub pcgbopnclbd: u64,
+    pub equip_guid: u64,
     #[prost(uint64, tag = "1")]
     pub avatar_guid: u64,
 }
@@ -36477,7 +36471,7 @@ pub struct Bkkclpahgkp {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Diiljpcemlo {
     #[prost(message, repeated, tag = "4")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(message, repeated, tag = "10")]
     pub jiaoopmhalf: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(message, optional, tag = "2")]
@@ -36861,7 +36855,7 @@ pub struct Phmgkkiocda {
     #[prost(message, repeated, tag = "9")]
     pub ocbicmnfndm: ::prost::alloc::vec::Vec<Gldmfoifafh>,
     #[prost(uint32, tag = "13")]
-    pub lgfmollpfln: u32,
+    pub equip_type: u32,
     #[prost(uint32, tag = "14")]
     pub eganlianadh: u32,
 }
@@ -37256,16 +37250,16 @@ pub struct Kechgcfhmbo {
     #[prost(uint32, tag = "5")]
     pub ppnmbgkbhll: u32,
     #[prost(
-        oneof = "kechgcfhmbo::Bmekiblncma",
+        oneof = "kechgcfhmbo::Detail",
         tags = "1875, 1845, 1879, 34, 869, 1078, 261, 262, 836, 452, 1105, 186, 1755, 224"
     )]
-    pub bmekiblncma: ::core::option::Option<kechgcfhmbo::Bmekiblncma>,
+    pub detail: ::core::option::Option<kechgcfhmbo::Detail>,
 }
 /// Nested message and enum types in `KECHGCFHMBO`.
 pub mod kechgcfhmbo {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "1875")]
         MechanicusInfo(super::Paggobpliob),
         #[prost(message, tag = "1845")]
@@ -37831,14 +37825,14 @@ pub struct Mmfdkidoldj {
     pub lfbffagoedg: u32,
     #[prost(uint32, tag = "5")]
     pub algefngoann: u32,
-    #[prost(oneof = "mmfdkidoldj::Bmekiblncma", tags = "11, 10")]
-    pub bmekiblncma: ::core::option::Option<mmfdkidoldj::Bmekiblncma>,
+    #[prost(oneof = "mmfdkidoldj::Detail", tags = "11, 10")]
+    pub detail: ::core::option::Option<mmfdkidoldj::Detail>,
 }
 /// Nested message and enum types in `MMFDKIDOLDJ`.
 pub mod mmfdkidoldj {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "11")]
         FlowerStartParam(super::Omacahgmkno),
         #[prost(message, tag = "10")]
@@ -37951,14 +37945,14 @@ pub struct Glifjbjlejh {
     pub avatar_info: ::core::option::Option<AvatarInfo>,
     #[prost(uint32, tag = "10")]
     pub player_uid: u32,
-    #[prost(oneof = "glifjbjlejh::Bmekiblncma", tags = "238")]
-    pub bmekiblncma: ::core::option::Option<glifjbjlejh::Bmekiblncma>,
+    #[prost(oneof = "glifjbjlejh::Detail", tags = "238")]
+    pub detail: ::core::option::Option<glifjbjlejh::Detail>,
 }
 /// Nested message and enum types in `GLIFJBJLEJH`.
 pub mod glifjbjlejh {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "238")]
         UgcAvatarInfo(super::Fhhmlcciccc),
     }
@@ -38337,17 +38331,17 @@ pub struct Nakadgnnpai {
 pub struct Gnnhokoaoao {}
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Eghadjdohke {
+pub struct Reliquary {
     #[prost(uint32, repeated, tag = "5")]
-    pub gaemjlciopb: ::prost::alloc::vec::Vec<u32>,
+    pub append_prop_id_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "2")]
-    pub obmbiphonfb: u32,
+    pub exp: u32,
     #[prost(uint32, tag = "3")]
     pub promote_level: u32,
     #[prost(uint32, tag = "1")]
     pub level: u32,
     #[prost(uint32, tag = "4")]
-    pub moafflgcmll: u32,
+    pub main_prop_id: u32,
 }
 /// CmdId: 26260
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -38532,13 +38526,13 @@ pub struct Mklkblaokeh {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Noipiellgno {
+pub struct Weapon {
     #[prost(map = "uint32, uint32", tag = "4")]
     pub affix_map: ::std::collections::HashMap<u32, u32>,
     #[prost(uint32, tag = "3")]
     pub promote_level: u32,
     #[prost(uint32, tag = "2")]
-    pub obmbiphonfb: u32,
+    pub exp: u32,
     #[prost(uint32, tag = "1")]
     pub level: u32,
     #[prost(bool, tag = "5")]
@@ -38957,7 +38951,7 @@ pub struct Apenhcdogak {
     #[prost(uint32, repeated, tag = "3")]
     pub pokelmfmpbh: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "8")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Aegnnmpigic>,
+    pub item_list: ::prost::alloc::vec::Vec<Aegnnmpigic>,
     #[prost(int32, tag = "7")]
     pub retcode: i32,
 }
@@ -39044,8 +39038,8 @@ pub struct Dghbeljdnij {
 pub struct Aajmnnlpdch {
     #[prost(int32, tag = "5")]
     pub retcode: i32,
-    #[prost(enumeration = "Pofibapbilh", tag = "7")]
-    pub lpafepagnol: i32,
+    #[prost(enumeration = "StoreType", tag = "7")]
+    pub store_type: i32,
     #[prost(uint64, tag = "14")]
     pub guid: u64,
 }
@@ -39292,7 +39286,7 @@ pub struct Nknbpapelkb {}
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Jgeepnfbcha {
     #[prost(uint32, tag = "2")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "10")]
     pub eigajccgfkd: u32,
 }
@@ -39925,7 +39919,7 @@ pub struct Monpnapbpcc {
     #[prost(uint32, tag = "3")]
     pub level: u32,
     #[prost(uint32, tag = "15")]
-    pub obmbiphonfb: u32,
+    pub exp: u32,
 }
 /// CmdId: 816
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -40296,7 +40290,7 @@ pub struct Oieicdebjlg {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TrialAvatarInfo {
     #[prost(message, repeated, tag = "2")]
-    pub trial_equip_list: ::prost::alloc::vec::Vec<Nkcgpmdjbdb>,
+    pub trial_equip_list: ::prost::alloc::vec::Vec<Item>,
     #[prost(message, optional, tag = "3")]
     pub grant_record: ::core::option::Option<Eimkhofhnbp>,
     #[prost(uint32, tag = "1")]
@@ -40842,7 +40836,7 @@ pub struct SceneAvatarInfo {
     #[prost(uint32, repeated, tag = "7")]
     pub talent_id_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "9")]
-    pub reliquary_list: ::prost::alloc::vec::Vec<Cieigoagpcp>,
+    pub reliquary_list: ::prost::alloc::vec::Vec<SceneReliquaryInfo>,
     #[prost(message, repeated, tag = "15")]
     pub server_buff_list: ::prost::alloc::vec::Vec<ServerBuff>,
     #[prost(uint32, repeated, tag = "16")]
@@ -41052,7 +41046,7 @@ pub struct Jghmakcfcbg {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dohcmjggpfl {
     #[prost(uint32, tag = "14")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "12")]
     pub item_id: u32,
     #[prost(bool, tag = "7")]
@@ -41425,7 +41419,7 @@ pub struct Dgeiaoidnpo {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Gldmfoifafh {
     #[prost(uint32, tag = "6")]
-    pub moafflgcmll: u32,
+    pub main_prop_id: u32,
     #[prost(uint32, tag = "10")]
     pub nlnnhnjnbmb: u32,
 }
@@ -41440,7 +41434,7 @@ pub struct Fbjmnahjhpn {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Mejlpcooomn {
     #[prost(uint32, tag = "1")]
-    pub lgfmollpfln: u32,
+    pub equip_type: u32,
     #[prost(uint32, tag = "3")]
     pub eganlianadh: u32,
 }
@@ -42342,14 +42336,14 @@ pub struct Chlbjbpncep {
     pub lfbffagoedg: u32,
     #[prost(uint32, tag = "7")]
     pub ejdklhkhgil: u32,
-    #[prost(oneof = "chlbjbpncep::Bmekiblncma", tags = "12")]
-    pub bmekiblncma: ::core::option::Option<chlbjbpncep::Bmekiblncma>,
+    #[prost(oneof = "chlbjbpncep::Detail", tags = "12")]
+    pub detail: ::core::option::Option<chlbjbpncep::Detail>,
 }
 /// Nested message and enum types in `CHLBJBPNCEP`.
 pub mod chlbjbpncep {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "12")]
         BonusInfo(super::Elgcpndagae),
     }
@@ -43215,7 +43209,7 @@ pub struct Onakecmkcni {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Ddanmmfjblg {
     #[prost(uint32, tag = "4")]
-    pub obmbiphonfb: u32,
+    pub exp: u32,
     #[prost(bool, tag = "8")]
     pub mflfgpknpgd: bool,
     #[prost(bool, tag = "3")]
@@ -43225,7 +43219,7 @@ pub struct Ddanmmfjblg {
     #[prost(uint32, tag = "15")]
     pub mbdnflilpdl: u32,
     #[prost(uint32, tag = "10")]
-    pub mlbpdlalfmp: u32,
+    pub count: u32,
     #[prost(uint32, tag = "5")]
     pub eigajccgfkd: u32,
     #[prost(uint32, tag = "9")]
@@ -43455,7 +43449,7 @@ pub struct Dnobnhmbnhj {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Mcbdejmnnmm {
     #[prost(message, repeated, tag = "7")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(message, repeated, tag = "9")]
     pub nkefnibfhcn: ::prost::alloc::vec::Vec<Lfmdnjmmncf>,
     #[prost(int32, tag = "3")]
@@ -43785,14 +43779,14 @@ pub struct Kmdleoccppj {
     pub dlcinighabm: u32,
     #[prost(int32, tag = "7")]
     pub retcode: i32,
-    #[prost(oneof = "kmdleoccppj::Bmekiblncma", tags = "1319")]
-    pub bmekiblncma: ::core::option::Option<kmdleoccppj::Bmekiblncma>,
+    #[prost(oneof = "kmdleoccppj::Detail", tags = "1319")]
+    pub detail: ::core::option::Option<kmdleoccppj::Detail>,
 }
 /// Nested message and enum types in `KMDLEOCCPPJ`.
 pub mod kmdleoccppj {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Bmekiblncma {
+    pub enum Detail {
         #[prost(message, tag = "1319")]
         FilmfestShootingInfo(super::Bgoljjbedoa),
     }
@@ -44089,7 +44083,7 @@ pub mod kkapneaahfg {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Pleiapgepbe {
     #[prost(message, repeated, tag = "13")]
-    pub mccnddlmpin: ::prost::alloc::vec::Vec<Jaclbgniman>,
+    pub item_list: ::prost::alloc::vec::Vec<Jaclbgniman>,
     #[prost(message, optional, tag = "11")]
     pub pgkdnhbijec: ::core::option::Option<Lpffbmdpiaf>,
     #[prost(int32, tag = "4")]
@@ -44658,14 +44652,14 @@ pub struct Dhhlbjpjflk {
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Fbjgbblcoli {
-    #[prost(enumeration = "Pofibapbilh", tag = "1")]
-    pub lpafepagnol: i32,
+    #[prost(enumeration = "StoreType", tag = "1")]
+    pub store_type: i32,
     #[prost(uint32, tag = "8")]
     pub mikamdokpob: u32,
     #[prost(uint32, tag = "6")]
     pub hjkghoeegmf: u32,
     #[prost(uint32, tag = "4")]
-    pub afgoojdngcn: u32,
+    pub weight_limit: u32,
     #[prost(uint32, tag = "10")]
     pub ebbpjekgnjf: u32,
     #[prost(uint32, tag = "7")]
@@ -57792,29 +57786,29 @@ impl Dppggnjakbh {
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum Pofibapbilh {
+pub enum StoreType {
     StoreNone = 0,
     StorePack = 1,
     StoreDepot = 2,
 }
-impl Pofibapbilh {
+impl StoreType {
     /// String value of the enum field names used in the ProtoBuf definition.
     ///
     /// The values are not transformed in any way and thus are considered stable
     /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
-            Pofibapbilh::StoreNone => "POFIBAPBILH_StoreNone",
-            Pofibapbilh::StorePack => "POFIBAPBILH_StorePack",
-            Pofibapbilh::StoreDepot => "POFIBAPBILH_StoreDepot",
+            StoreType::StoreNone => "StoreType_StoreNone",
+            StoreType::StorePack => "StoreType_StorePack",
+            StoreType::StoreDepot => "StoreType_StoreDepot",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
     pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
         match value {
-            "POFIBAPBILH_StoreNone" => Some(Self::StoreNone),
-            "POFIBAPBILH_StorePack" => Some(Self::StorePack),
-            "POFIBAPBILH_StoreDepot" => Some(Self::StoreDepot),
+            "StoreType_StoreNone" => Some(Self::StoreNone),
+            "StoreType_StorePack" => Some(Self::StorePack),
+            "StoreType_StoreDepot" => Some(Self::StoreDepot),
             _ => None,
         }
     }
